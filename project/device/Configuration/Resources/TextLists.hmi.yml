@@ -1,0 +1,23 @@
+#Version: 2.0
+
+TextListContainers:
+  #Add your TextLists here, e.g.:
+  #MyTextList:
+  #  ResourceListType: TextList
+  #  ResourceLists:
+  #    TextList1:
+  #      RangeType: Decimal
+  #      Entries:
+  #        Entry_1:
+  #          Type: SingleValue
+  #          Value: 1
+  #          IsDefaultEntry: false
+  #          Text: MyTextLibrary.Entry_1
+  #        Entry_2:
+  #          Type: SingleValue
+  #          Value: 2
+  #          IsDefaultEntry: false
+  #          Text: MyTextLibrary.Entry_1
+  #
+  #
+  # For more information, see: https://docu.simatic-ue.siemens.io/learn/documentation/reference/winccml/webpage_docs/winccml-reference/LanguageReferenceFiles/Output/TEXTLISTCONTAINER/

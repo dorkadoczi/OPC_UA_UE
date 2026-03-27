@@ -1,0 +1,41 @@
+#Version: 2.0
+
+Runtime:
+  device:
+    SystemID: 1
+    DefaultLanguage: en-US
+    Languages:
+    - en-US
+    InitialLoggingLanguages:
+    - en-US
+    DefinitionFiles:
+    - Tags/StructureTagTypes.hmi.yml
+    - PREDEFINED/RuntimeSystem/CoreArtifacts_001.hmi.yml
+    Files:
+    - AlarmClasses.hmi.yml
+    - Resources/GraphicLibrary.hmi.yml
+    - Resources/TextLibrary.hmi.yml
+    - Resources/GraphicLists.hmi.yml
+    - Resources/TextLists.hmi.yml
+    - Screens/Screen1.screen.hmi.yml
+    - Screens/ScreenWindowLayouts.hmi.yml
+    - Tags/Tags.hmi.yml
+    - Tags/StructureTags.hmi.yml
+    - GlobalModules.hmi.yml
+    - ScheduledTasks.hmi.yml
+    - UserManagement/RolesFunctionRights.hmi.yml
+    - UserManagement/Users.hmi.yml
+    - PREDEFINED/GeneratedGlobalScripts.hmi.yml
+    - PREDEFINED/DomainFunctions.hmi.yml
+    - DomainFunctions.hmi.yml
+    - PREDEFINED/StaticArtifacts_001.hmi.yml
+    - PREDEFINED/RuntimeSystem/StaticArtifacts_001.hmi.yml
+    - PREDEFINED/UserInterfaceScripting/StaticArtifacts_001.hmi.yml
+    - PREDEFINED/RTS/StaticArtifacts_001.hmi.yml
+    SymbolFiles:
+    - PREDEFINED/ManagerNumbers.sym.yml
+    StyleFiles:
+    - ExternalFiles/Styles/ScreenItemPropertyList_ExtendedStyle.xml
+    - ExternalFiles/Styles/ScreenItemPropertyList_FlatStyle_Bright.xml
+    - ExternalFiles/Styles/ScreenItemPropertyList_FlatStyle_Dark.xml
+    CurrentStyle: ExtendedStyle

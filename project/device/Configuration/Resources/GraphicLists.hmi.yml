@@ -1,0 +1,29 @@
+#Version: 2.0
+
+GraphicListContainers:
+  # Add your graphic lists here, e.g.:
+  #AllMyGraphicLists:
+  #  ResourceListType: GraphicList
+  #  ResourceLists:
+  #    TrafficLights:
+  #      RangeType: Decimal
+  #      Entries:
+  #        Red:
+  #          Type: SingleValue
+  #          Value: 1
+  #          IsDefaultEntry: true
+  #          Graphic: myFirstGraphicLibrary.trafficlightRed
+  #        Yellow:
+  #          Type: Range
+  #          FromValue: 2
+  #          ToValue: 4
+  #          IsDefaultEntry: false
+  #          Graphic: myFirstGraphicLibrary.trafficlightYellow
+  #        Green:
+  #          Type: From
+  #          FromValue: 5
+  #          IsDefaultEntry: false
+  #          Graphic: myFirstGraphicLibrary.trafficlightYellow
+  #
+  #
+  # For more information, see: https://docu.simatic-ue.siemens.io/learn/documentation/reference/winccml/webpage_docs/winccml-reference/LanguageReferenceFiles/Output/GRAPHICLISTCONTAINER/

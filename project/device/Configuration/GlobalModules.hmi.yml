@@ -1,0 +1,11 @@
+#Version: 2.0
+
+ScriptModules:
+  # MyGlobalModule:
+  #   ScriptFile: Scripts/GlobalModule1.js
+  #   ScriptLanguage: JavaScript
+  #   Scripts:
+  #     myGlobalFunction1:
+#
+#
+# For more information, see: https://docu.simatic-ue.siemens.io/learn/documentation/reference/winccml/webpage_docs/winccml-reference/LanguageReferenceFiles/Output/7_SCRIPTMODULE/

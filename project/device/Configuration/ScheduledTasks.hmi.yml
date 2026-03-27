@@ -1,0 +1,24 @@
+#Version: 2.0
+ScriptModules:
+  # ScheduledTasks:
+  #   ScriptLanguage: JavaScript
+  #   ScriptFile: Scripts/ScheduledTasks.js
+  #   Scripts:
+  #     Task1:
+
+Tasks:
+  ##Add tasks here, e.g.:
+  # myTask1:
+  #   DisabledAtStartup: false
+  #   Triggers:
+  #     CyclicTrigger:
+  #       ObjectType: HmiCyclicTrigger
+  #       Cycle: T1s
+  #   Actions:
+  #     MyAction:
+  #       Type: Script
+  #       ObjectType: HmiScriptAction
+  #       Script: ScheduledTasks.Task1
+#
+# To use Scheduled Tasks, JobScheduler must be enabled in the DomainFunctions.hmi.yml
+# For more information, see: https://docu.simatic-ue.siemens.io/learn/documentation/reference/winccml/webpage_docs/winccml-reference/LanguageReferenceFiles/Output/7_TASK/

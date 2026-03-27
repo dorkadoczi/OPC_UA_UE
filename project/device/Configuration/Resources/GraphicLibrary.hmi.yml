@@ -1,0 +1,28 @@
+#Version: 2.0
+
+GraphicLibraries:
+  # Add your libraries here, e.g.:
+  # myFirstGraphicLibrary:
+  #  DefaultLanguage: de-DE
+  #  Type: Graphic
+  #  Languages:
+  #  - de-DE
+  #  Entries:
+  #    trafficlightRed:
+  #      BinaryType: Embedded
+  #      Format: jpg
+  #      Resource AS DynStringArray:
+  #      - somePathToRedLight.jpg
+  #    trafficlightYellow:
+  #      BinaryType: Embedded
+  #      Format: jpg
+  #      Resource AS DynStringArray:
+  #      - somePathToYellowLight.jpg
+  #    trafficlightGreen:
+  #      BinaryType: Embedded
+  #      Format: jpg
+  #      Resource AS DynStringArray:
+  #      - somePathToGreenLight.jpg
+  #
+  #
+  # For more information, see: https://docu.simatic-ue.siemens.io/learn/documentation/reference/winccml/webpage_docs/winccml-reference/LanguageReferenceFiles/Output/GRAPHICLIBRARY/

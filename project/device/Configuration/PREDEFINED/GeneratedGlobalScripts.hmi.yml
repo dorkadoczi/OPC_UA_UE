@@ -1,0 +1,29 @@
+#Version: 2.0
+
+ScriptModules:
+  GlobalModule1_dot_js: # PREDEFINED - please do NOT change/delete
+    ScriptFile: Scripts/GlobalModule1.js
+    ScriptLanguage: JavaScript
+    Scripts:
+      myGlobalFunction1: 
+  ScheduledTasks_dot_js: # PREDEFINED - please do NOT change/delete
+    ScriptFile: Scripts/ScheduledTasks.js
+    ScriptLanguage: JavaScript
+    Scripts:
+      Task1: 
+  Screen1_dot_js: # PREDEFINED - please do NOT change/delete
+    ScriptFile: Scripts/Screen1.js
+    ScriptLanguage: JavaScript
+    Scripts:
+      MyButton_onDown:
+        Parameters:
+          item:
+            DataType: 14
+          x:
+            DataType: 14
+          y:
+            DataType: 14
+          modifiers:
+            DataType: 14
+          trigger:
+            DataType: 14

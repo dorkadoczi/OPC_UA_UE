@@ -1,0 +1,10 @@
+#Version: 2.0
+
+SimpleTags:
+  #Add tags here, e.g.:
+  # MyTag:
+  #   DataType: DInt
+  #   InitialValue: 20
+#
+#
+# For more information, see: https://docu.simatic-ue.siemens.io/learn/documentation/reference/winccml/webpage_docs/winccml-reference/LanguageReferenceFiles/Output/SIMPLETAG/

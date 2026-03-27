@@ -1,0 +1,38 @@
+name: "opc_ua_2"
+version: 0.0.0
+type: workspace
+variables:
+  DEVICE: "device"
+  PROJECT: "project"
+scripts:
+  postinstall: "cd ./project/device && apax install && apax
+    install-scripting-files && if [ \"$OSTYPE\" == \"linux-gnu\" ]; then ln -s
+    -f ./.apax/packages/@ue/model-hmiscada-v20.0.0.2 ./Model; else if [ -d
+    \"./Model\" ]; then rm -r ./Model; fi && cmd //C \"mklink /J .\\Model
+    .\\.apax\\packages\\@ue\\model-hmiscada-v20.0.0.2\"; fi"
+
+  #Preparation of a delta download and delta download can be used if the device has already been downloaded to Runtime at least once,
+  #and if the changes that have been made since the last download do not require a full download.
+  delta:
+    - apax dm preparedownload $DEVICE --projectname $PROJECT --delta
+    - apax dm download $DEVICE --projectname $PROJECT --unsecure --delta
+
+  #Make a full download
+  fulldownload:
+    - apax dm preparedownload $DEVICE --projectname $PROJECT
+    #In case of first download ever, keep next line commented
+    # - apax dm stopruntime $DEVICE --projectname $PROJECT --unsecure
+    - apax dm download $DEVICE --projectname $PROJECT --unsecure
+    - apax dm startruntime $DEVICE --projectname $PROJECT --unsecure
+
+  #Downloads the configuration project of a device to a portable archive
+  offline:
+    - apax dm preparedownload $DEVICE --projectname $PROJECT
+    - apax dm download $DEVICE --projectname $PROJECT --portable
+
+  #Update the Domain Functions
+  updatedomainf: apax dm updatedomainfunctions $DEVICE --projectname $PROJECT
+
+dependencies:
+  "@ue/code.elements": ^3.4.0
+  "@ue/open.elements": ^2.0.1

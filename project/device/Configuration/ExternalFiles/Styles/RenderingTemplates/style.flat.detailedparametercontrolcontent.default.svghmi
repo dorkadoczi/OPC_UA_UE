@@ -1,0 +1,622 @@
+﻿<!DOCTYPE svg PUBLIC "-//SIEMENS//DTD SVG 1.0 TIA-HMI//EN" "http://tia.siemens.com/graphics/svg/1.9/dtd/svg19-hmi.dtd">
+<!-- SIMATIC WINCC UA Copyright (C) Siemens AG 2017. All Rights Reserved. -->
+
+<!--  SingleCurlyBrackets = true;   DirectBindingToChromProps = true;   hmi-bind:scope = false  -->
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:hmi-bind--xlink="http://svg.siemens.com/hmi/bind/xlink/"
+     xmlns:hmi="http://svg.siemens.com/hmi/"
+     xmlns:hmi-bind="http://svg.siemens.com/hmi/bind/"
+     xmlns:hmi-types="http://svg.siemens.com/hmi/types/"
+     xmlns:hmi-element="http://svg.siemens.com/hmi/element/"
+     xmlns:hmi-feature="http://svg.siemens.com/hmi/feature/"
+     xmlns:hmi-flex="http://svg.siemens.com/hmi/flex/"
+     xmlns:hmi-event="http://svg.siemens.com/hmi/event/"
+     preserveAspectRatio="none"
+     id="custom_DetailedParameterControlContent"
+     data-tif-type="WSI:SvgGrid">
+  <hmi:self type="custom" displayName="Flat detailedparameterControlContent" name="style.flat.detailedparametercontrolcontent">
+    <hmi:paramDef name="WindowBorderWidth"          type="number" />
+    <hmi:paramDef name="CaptionHeight"              type="number" />
+    <hmi:paramDef name="ContentOffsetHeight"        type="number" />
+    <hmi:paramDef name="FocusColor"                 type="string" />
+    <hmi:paramDef name="ShowFocusVisual"            type="boolean"/>
+    <hmi:paramDef name="SearchBarVisible"           type="boolean"/>
+  </hmi:self>
+  <defs>
+    <hmi:localDef name="MyLocalContent"    type="HmiContentPart">
+      <hmi-types:content
+      SplitRatio="0.5"
+      ContentMode="2"
+      TextPosition="0"
+      GraphicStretchMode="0"
+      VerticalTextAlignment="1"
+      HorizontalTextAlignment="0"
+      Spacing="5"
+      TextTrimming="1"
+      Type="0"
+      ElementID="0"/>
+    </hmi:localDef>
+    <hmi:localDef name="MyLocalPadding" type="HmiPaddingPart">
+      <hmi-types:padding
+      Left="5"
+      Right="0"
+      Top="0"
+      Bottom="0"/>
+    </hmi:localDef>
+    <hmi:localDef name="ShowGridFocus"               type="boolean"  hmi-bind:value="{{ and( ParamProps.ShowFocusVisual, SysProps.HasFocus ) }}"                                                                    />
+    <hmi:localDef name="ResourceListDelay"           type="boolean"  value="true"                                                                                                                                   />
+    <hmi:localDef name="FocusRectStrokeWidth"        type="number"   value="4"                                                                                                                                      />
+    <hmi:localDef name="BorderWidth"                 type="number"   value="5"                                                                                                                                      />
+    <hmi:localDef name="PropNameText"                type="string"   value="Text"                                                                                                                                   />
+    <hmi:localDef name="PropNameGraphic"             type="string"   value="Graphic"                                                                                                                                />
+    <hmi:localDef name="PropNameGraphicWidth"        type="string"   value="GraphicWidth"                                                                                                                           />
+    <hmi:localDef name="PropNameGraphicHeight"       type="string"   value="GraphicHeight"                                                                                                                          />
+    <hmi:localDef name="ComboWidth"                  type="number"   value="220"                                                                                                                                    />
+    <hmi:localDef name="ComboHeight"                 type="number"   value="40"                                                                                                                                     />
+    <hmi:localDef name="NumberFieldHeight"           type="number"   value="39"                                                                                                                                     />
+    <hmi:localDef name="NumberFieldWidth"            type="number"   value="60"                                                                                                                                     />
+    <hmi:localDef name="MainControlHeight"           type="number"   value="75"                                                                                                                                     />
+    <hmi:localDef name="PaddingBtwnPSTPS"            type="number"   value="30"                                                                                                                                     />
+    <hmi:localDef name="PaddingBtwnComboNum"         type="number"   value="5"                                                                                                                                      />
+    <hmi:localDef name="PaddingAroundCombo"          type="number"   value="20"                                                                                                                                     />
+    <hmi:localDef name="MainControlWidth"            type="number"   hmi-bind:value="{{ LocalProps.PaddingBtwnPSTPS + ( LocalProps.ComboWidth * 2 ) + ( LocalProps.NumberFieldWidth * 2 ) + ( LocalProps.PaddingBtwnComboNum * 2 ) + ( LocalProps.PaddingAroundCombo * 2 )}}" />
+    <hmi:localDef name="SingleCombolWidth"           type="number"   hmi-bind:value="{{ LocalProps.MainControlWidth / 2 }}"                                                                                         />
+    <hmi:localDef name="DirectionRow"                type="string"   value="row"                                                                                                                                    />
+    <hmi:localDef name="DirectionRowReverse"         type="string"   value="row-reverse"                                                                                                                            />
+    <hmi:localDef name="DirectionColumnReverse"      type="string"   value="column-reverse"                                                                                                                         />
+    <hmi:localDef name="PstBottomPadding"            type="number"   value="10"                                                                                                                                     />
+    <hmi:localDef name="NumberToDisplay"             type="number"   value="6"                                                                                                                                      />
+    <hmi:localDef name="NumberToolTipDispLimit"      type="number"   value="99999"                                                                                                                                  />
+    <hmi:localDef name="NumberFieldMidPosition"      type="string"   value="50%"                                                                                                                                    />
+    <hmi:localDef name="NumberFieldTextXPos"         type="number"   value="235"                                                                                                                                    />
+    <hmi:localDef name="NumberFieldTextYPos"         type="number"   value="26"                                                                                                                                     />
+    <hmi:localDef name="HeaderGridLineColor"         type="string"   hmi-bind:value="{{ Converter.RGBA(  HmiProps.ParameterView.HeaderSettings.HeaderGridLineColor ) }}"                                            />
+    <hmi:localDef name="ControlHeight"               type="number"   hmi-bind:value="{{ Layout.ActualHeight - 2 * ParamProps.WindowBorderWidth - ParamProps.CaptionHeight - ParamProps.ContentOffsetHeight }}"      />
+    <hmi:localDef name="ControlWidth"                type="number"   hmi-bind:value="{ Layout.ActualWidth }"                                                                                                        />
+    <hmi:localDef name="IsParameterSetTypeFixed"     type="boolean"  hmi-bind:value="{{ (HmiProps.ParameterSetTypeFixed == '') ? true : false }}"                                                                           />
+    <hmi:localDef name="PaddingBtwnComboGrid"        type="number"   value="8"                                                                                                                                      />
+    <hmi:localDef name="ListItemHeight"              type="number"   hmi-bind:value="{{ HmiProps.ParameterView.Font.Size * 1.5 + 10 }}"                                                                             />
+    <hmi:localDef name="VerticalPaddingBtwnCombo"    type="number"   hmi-bind:value="{{ LocalProps.PaddingBtwnComboNum + LocalProps.PaddingAroundCombo }}"                                                          />
+    <hmi:localDef name="ListHeightTillWindow"        type="number"   hmi-bind:value="{{ abs( LocalProps.ControlHeight - ( LocalProps.MainControlHeight - LocalProps.PaddingBtwnComboGrid ) + ( HmiProps.ToolBar.Visible ? HmiProps.ToolBar.Height : 0 ) + ( HmiProps.StatusBar.Visible ? HmiProps.StatusBar.Height : 0 ) ) }}" />
+    <hmi:localDef name="MainControlHeightPadding"    type="number"   hmi-bind:value="{{ LocalProps.MainControlHeight - LocalProps.PstBottomPadding }}"                                                              />
+    <hmi:localDef name="IsControlHeightLess"         type="boolean"  hmi-bind:value="{{ lt( LocalProps.ControlHeight, LocalProps.MainControlHeightPadding ) }}"                                                     />
+    <hmi:localDef name="ComboHeightTillGrid"         type="number"   hmi-bind:value="{{ 2 * LocalProps.ComboHeight  + LocalProps.PaddingBtwnPSTPS + LocalProps.PstBottomPadding }}"                                 />
+    <hmi:localDef name="Stroke"                      type="string"   hmi-bind:value="{{ Converter.RGB( 4288059030 ) }}"                                                                                             />
+
+    <!--Parameter set type positioning -->
+    <hmi:localDef name="PstComboType"                      type="string"   value="PST"                                                                                                                              />
+    <!--Parameter set  positioning -->
+    <hmi:localDef name="PsComboType"                       type="string"   value="PS"                                                                                                                               />
+    <!--Common combo properties-->
+    <hmi:localDef name="NameLblY"                          type="number"   value="20"                                                                                                                               />
+    <hmi:localDef name="NumberLblX"                        type="number"   value="235"                                                                                                                              />
+    <hmi:localDef name="ComboX"                            type="number"   value="10"                                                                                                                               />
+    <hmi:localDef name="ComboY"                            type="number"   value="25"                                                                                                                               />
+    <!--Font properties-->
+    <hmi:localDef name="FontStyle"                          type="string"   hmi-bind:value="{{ HmiProps.Font.Italic ? 'italic': 'normal' }}"                                                                        />
+    <hmi:localDef name="TextDecoration"                     type="string"   hmi-bind:value="{{ HmiProps.Font.Underline ? ( HmiProps.Font.StrikeOut ? 'underline line-through' : 'underline' ) : ( HmiProps.Font.StrikeOut ? 'line-through' : ' ' ) }}" />
+    <hmi:localDef name="ForeColor"                          type="string"   hmi-bind:value="{{ Converter.RGBA( HmiProps.ForeColor ) }}"                                                                             />
+    <hmi:localDef name="SelectionForeColor"                 type="string"   hmi-bind:value="{{ Converter.RGBA( HmiProps.SelectionForeColor ) }}"                                                                    />
+    <hmi:localDef name="DefaultParamSetTypeUnitText"        type="string"   hmi-bind:value="{{ Converter.GetTextByID( 'TBID_PacoCtrl_defaultTextParamSetTypeUnit' ) }}"                                             />
+    <!--Search Option properties-->
+    <hmi:localDef name="SearchOptionVisible"                type="boolean"  hmi-bind:value="{ ParamProps.SearchBarVisible }"                                                                                        />
+    <hmi:localDef name="SearchIconY"                        type="number"   hmi-bind:value="{{ lt( HmiProps.Width , LocalProps.MainControlWidth )  ? (HmiProps.ParameterSetTypeFixed ? 91 : 150) : 91 }}"           />
+    <hmi:localDef name="CancelIconRectY"                    type="number"   hmi-bind:value="{{ lt( HmiProps.Width , LocalProps.MainControlWidth ) ? (HmiProps.ParameterSetTypeFixed ? 90 : 155) : 90 }}"            />
+    <hmi:localDef name="CancelIconY"                        type="number"   hmi-bind:value="{{ lt( HmiProps.Width , LocalProps.MainControlWidth ) ? (HmiProps.ParameterSetTypeFixed ? 95 : 155) : 95 }}"            />
+    <hmi:localDef name="SearchTextY"                        type="number"   hmi-bind:value="{{ lt( HmiProps.Width , LocalProps.MainControlWidth ) ? (HmiProps.ParameterSetTypeFixed ? 85 : 145) : 85 }}"            />
+    <hmi:localDef name="SearchText"                         type="string"   hmi-bind:value="{ HmiProps.CurrentSearchText }"                                                 />
+    <hmi:localDef name="SearchDefaultText"                  type="string"   hmi-bind:value="{{ Converter.GetTextByID( 'TBID_PacoCtrl_defaultTextSearchByName' ) }}"                                                 />
+    <hmi:localDef name="SearchButtonText"                   type="string"   hmi-bind:value="{{ Converter.GetTextByID( 'TBID_PacoCtrl_defaultTextSearchButton' ) }}"                                                 />
+    <hmi:localDef name="JumpToButtonY"                      type="number"   hmi-bind:value="{{ lt( HmiProps.Width , LocalProps.MainControlWidth ) ? (HmiProps.ParameterSetTypeFixed ? 85 : 145) : 85 }}"            />
+    <hmi:localDef name="JumpToButtonIconY"                  type="number"   hmi-bind:value="{{ lt( HmiProps.Width , LocalProps.MainControlWidth ) ? (HmiProps.ParameterSetTypeFixed ? 88 : 148) : 88 }}"            />
+    <hmi:localDef name="TitleTextBackColorOnPressed"        type="string"   value="rgba(50, 50, 50,255)"                                                                                                            />
+    <hmi:localDef name="SearchButtonRectY"                  type="number"   hmi-bind:value="{{ lt( HmiProps.Width , LocalProps.MainControlWidth ) ? (HmiProps.ParameterSetTypeFixed ? 85 : 145) : 85 }}"            />
+    <hmi:localDef name="SearchButtonTextY"                  type="number"   hmi-bind:value="{{ lt( HmiProps.Width , LocalProps.MainControlWidth ) ? (HmiProps.ParameterSetTypeFixed ? 110 : 170) : 110 }}"          />
+    <hmi:localDef name="SearchFieldForeColor"               type="string"   hmi-bind:value="{{ Converter.RGBA( HmiProps.BackColor ) }}"                                                                             />
+    <hmi:localDef name="SearchTextHeight"                   type="number"   hmi-bind:value="{{ LocalProps.SearchOptionVisible ? 60 : 0 }}"                                                                          />
+    <hmi:localDef name="SearchClicked"                      type="boolean"  value="false"                                                                                                                           />
+    <hmi:localDef name="JumpToClicked"                      type="boolean"  value="false"                                                                                                                           />
+    <hmi:localDef name="SearchButtonPressed"                type="boolean"  value="false"                                                                                                                           />
+    <hmi:localDef name="SearchButtonMouseHover"             type="boolean"  value="false"                                                                                                                           />
+    <hmi:localDef name="JumpToUpButtonPressed"              type="boolean"  value="false"                                                                                                                           />
+    <hmi:localDef name="JumpToUpButtonMouseHover"           type="boolean"  value="false"                                                                                                                           />
+    <hmi:localDef name="JumpToDownButtonPressed"            type="boolean"  value="false"                                                                                                                           />
+    <hmi:localDef name="JumpToDownButtonMouseHover"         type="boolean"  value="false"                                                                                                                           />
+    <hmi:localDef name="IsEditing"                          type="boolean"  value="true"                                                                                                                            />
+
+    <!--Search Option events-->
+    <hmi:action id="onCancelClick" >
+      <hmi:setProperty name="LocalProps.SearchText"         type="string" value=""                                                                />
+      <hmi:sendCommand name="SEARCH_ELEMENTS"               hmi-bind:value="{{ 'SearchText:' + LocalProps.SearchText + ',Operation:Cancel' }}"    />
+      <hmi:sendCommand name="SEARCH_CANCEL_PRESSED"         hmi-bind:value="{ LocalProps.SearchText }"                                            />
+      <hmi:setProperty name="LocalProps.SearchClicked"      type="boolean" value="false"                                                          />
+      <hmi:setProperty name="LocalProps.JumpToClicked"      type="boolean" value="false"                                                          />
+    </hmi:action>
+
+    <hmi:action id="onSearchTextFieldClick" >
+      <hmi:setProperty name="LocalProps.SearchFieldForeColor"   type="string"  hmi-bind:value="{{ Converter.RGBA(HmiProps.SelectionBackColor)  }}" />
+      <hmi:sendCommand name="SEARCH_ELEMENTS"  hmi-bind:condition="{{ and(LocalProps.SearchText != LocalProps.SearchDefaultText,LocalProps.SearchText != '') }}"  hmi-bind:value="{{ 'SearchText:' + LocalProps.SearchText + ',Operation:Cancel' }}" />
+      <hmi:setProperty name="HmiProps.CurrentSearchText"         type="string"  value=""                                                               />
+      <hmi:setProperty name="LocalProps.IsEditing"        	type="boolean" value="true"                                                           />
+      <hmi:setProperty name="LocalProps.SearchClicked"      type="boolean" value="false"                                                          />
+      <hmi:setProperty name="LocalProps.JumpToClicked"      type="boolean" value="false"                                                          />
+    </hmi:action>
+
+    <hmi:action id="onComboClicked" >
+      <hmi:setProperty name="LocalProps.IsEditing"          type="boolean" value="false"                                                          />
+    </hmi:action>
+
+    <hmi:action id="onSearchButtonMouseDown" hmi-bind:condition="{{ and( and(LocalProps.SearchText != LocalProps.SearchDefaultText,LocalProps.SearchText != ''), not(LocalProps.JumpToClicked)) }}"  >
+      <hmi:sendCommand name="SEARCH_ELEMENTS"                      hmi-bind:value="{{ 'SearchText:' + LocalProps.SearchText + ',Operation:Search' }}"       />
+      <hmi:setProperty name="LocalProps.SearchButtonPressed"       type="boolean" value="true"                                                              />
+      <hmi:setProperty name="LocalProps.SearchButtonMouseHover"    type="boolean" value="false"                                                             />
+      <hmi:setProperty name="LocalProps.SearchClicked"             type="boolean" hmi-bind:value="{{ LocalProps.JumpToClicked ? false : true }}"            />
+    </hmi:action>
+
+    <hmi:action id="onSearchButtonMouseHover" hmi-bind:condition="{{ and( and(LocalProps.SearchText != LocalProps.SearchDefaultText,LocalProps.SearchText != ''), not(LocalProps.JumpToClicked)) }}" >
+      <hmi:setProperty name="LocalProps.SearchButtonMouseHover"    type="boolean" value="true"                                                              />
+    </hmi:action>
+
+    <hmi:action id="onSearchButtonMouseUp" hmi-bind:condition="{{ and( and(LocalProps.SearchText != LocalProps.SearchDefaultText,LocalProps.SearchText != ''), not(LocalProps.JumpToClicked)) }}" >
+      <hmi:setProperty name="LocalProps.SearchButtonPressed"        type="boolean" value="false"                                                            />
+      <hmi:setProperty name="LocalProps.SearchButtonMouseHover"     type="boolean" value="true"                                                             />
+    </hmi:action>
+
+    <hmi:action id="onSearchButtonMouseLeave" hmi-bind:condition="{{ and( and(LocalProps.SearchText != LocalProps.SearchDefaultText,LocalProps.SearchText != ''), not(LocalProps.JumpToClicked)) }}" >
+      <hmi:setProperty name="LocalProps.SearchButtonPressed"        type="boolean" value="false"                                                             />
+      <hmi:setProperty name="LocalProps.SearchButtonMouseHover"     type="boolean" value="false"                                                             />
+    </hmi:action>
+
+    <hmi:action id="onJumpToDownButtonMouseDown" hmi-bind:condition="{{ and( and(LocalProps.SearchText != LocalProps.SearchDefaultText,LocalProps.SearchText != ''), not(LocalProps.SearchClicked)) }}" >
+      <hmi:sendCommand name="SEARCH_ELEMENTS"                         hmi-bind:value="{{ 'SearchText:' + LocalProps.SearchText + ',Operation:JumpDown' }}"        />
+      <hmi:setProperty name="LocalProps.JumpToClicked"                type="boolean" hmi-bind:value="{{ LocalProps.SearchClicked ? false : true }}"               />
+      <hmi:setProperty name="LocalProps.JumpToDownButtonPressed"      type="boolean" value="true"                                                                 />
+      <hmi:setProperty name="LocalProps.JumpToDownButtonMouseHover"   type="boolean" value="false"                                                                />
+    </hmi:action>
+
+    <hmi:action id="onJumpToDownButtonMouseHover" hmi-bind:condition="{{ and( and(LocalProps.SearchText != LocalProps.SearchDefaultText,LocalProps.SearchText != ''), not(LocalProps.SearchClicked)) }}" >
+      <hmi:setProperty name="LocalProps.JumpToDownButtonMouseHover"   type="boolean" value="true"                                                           />
+    </hmi:action>
+
+    <hmi:action id="onJumpToDownButtonMouseUp" hmi-bind:condition="{{ and( and(LocalProps.SearchText != LocalProps.SearchDefaultText,LocalProps.SearchText != ''), not(LocalProps.SearchClicked)) }}"  >
+      <hmi:setProperty name="LocalProps.JumpToDownButtonPressed"        type="boolean" value="false"                                                            />
+      <hmi:setProperty name="LocalProps.JumpToDownButtonMouseHover"     type="boolean" value="true"                                                             />
+    </hmi:action>
+
+    <hmi:action id="onJumpToDownButtonMouseLeave" hmi-bind:condition="{{ and( and(LocalProps.SearchText != LocalProps.SearchDefaultText,LocalProps.SearchText != ''), not(LocalProps.SearchClicked)) }}" >
+      <hmi:setProperty name="LocalProps.JumpToDownButtonPressed"        type="boolean" value="false"                                                            />
+      <hmi:setProperty name="LocalProps.JumpToDownButtonMouseHover"     type="boolean" value="false"                                                            />
+    </hmi:action>
+
+    <hmi:action id="onJumpToUpButtonMouseDown" hmi-bind:condition="{{ and( and(LocalProps.SearchText != LocalProps.SearchDefaultText,LocalProps.SearchText != ''), not(LocalProps.SearchClicked)) }}" >
+      <hmi:sendCommand name="SEARCH_ELEMENTS"                         hmi-bind:value="{{ 'SearchText:' + LocalProps.SearchText + ',Operation:JumpUp' }}"        />
+      <hmi:setProperty name="LocalProps.JumpToClicked"                type="boolean" hmi-bind:value="{{ LocalProps.SearchClicked ? false : true }}"             />
+      <hmi:setProperty name="LocalProps.JumpToUpButtonPressed"        type="boolean" value="true"                                                               />
+      <hmi:setProperty name="LocalProps.JumpToUpButtonMouseHover"     type="boolean" value="false"                                                              />
+    </hmi:action>
+
+    <hmi:action id="onJumpToUpButtonMouseHover" hmi-bind:condition="{{ and( and(LocalProps.SearchText != LocalProps.SearchDefaultText,LocalProps.SearchText != ''), not(LocalProps.SearchClicked)) }}" >
+      <hmi:setProperty name="LocalProps.JumpToUpButtonMouseHover"     type="boolean" value="true"                                                               />
+    </hmi:action>
+
+    <hmi:action id="onJumpToUpButtonMouseUp" hmi-bind:condition="{{ and( and(LocalProps.SearchText != LocalProps.SearchDefaultText,LocalProps.SearchText != ''), not(LocalProps.SearchClicked)) }}" >
+      <hmi:setProperty name="LocalProps.JumpToUpButtonPressed"        type="boolean" value="false"                                                              />
+      <hmi:setProperty name="LocalProps.JumpToUpButtonMouseHover"     type="boolean" value="true"                                                               />
+    </hmi:action>
+
+    <hmi:action id="onJumpToUpButtonMouseLeave" hmi-bind:condition="{{ and( and(LocalProps.SearchText != LocalProps.SearchDefaultText,LocalProps.SearchText != ''), not(LocalProps.SearchClicked)) }}" >
+      <hmi:setProperty name="LocalProps.JumpToUpButtonPressed"        type="boolean" value="false"                                                               />
+      <hmi:setProperty name="LocalProps.JumpToUpButtonMouseHover"     type="boolean" value="false"                                                               />
+    </hmi:action>
+
+    <!--Parameter set type label clipping-->
+    <clipPath id="PstNameLblCliping">
+      <rect hmi-bind:x="{ LocalProps.ComboX }" hmi-bind:width="{ LocalProps.ComboWidth }" hmi-bind:height="{ LocalProps.ComboHeight }">
+      </rect>
+    </clipPath>
+    <clipPath id="PstNumberLblCliping">
+      <rect hmi-bind:x="{ LocalProps.NumberLblX }" hmi-bind:width="{{ (LocalProps.NumberFieldWidth + 20) }}" hmi-bind:height="{ LocalProps.ComboHeight }">
+      </rect>
+    </clipPath>
+
+    <!--Parameter set label clipping-->
+    <clipPath id="PsNameLblCliping">
+      <rect hmi-bind:x="{ LocalProps.ComboX }" hmi-bind:width="{ LocalProps.ComboWidth }" hmi-bind:height="{ LocalProps.ComboHeight }">
+      </rect>
+    </clipPath>
+    <clipPath id="PsNumberLblCliping">
+      <rect hmi-bind:x="{ LocalProps.NumberLblX }" hmi-bind:width="{{ (LocalProps.NumberFieldWidth + 20) }}" hmi-bind:height="{ LocalProps.ComboHeight }">
+      </rect>
+    </clipPath>
+  </defs>
+  <g hmi-flex:width="{ HmiProps.Width }"
+     hmi-flex:height="{ LocalProps.ControlHeight }"
+     hmi-flex:direction="{ LocalProps.DirectionColumnReverse }"
+     hmi-flex:wrap="false">
+    <!--Paco grid part-->
+    <g hmi-flex:grow="1"
+       hmi-flex:width="{ Layout.ActualWidth }">
+              <g hmi:if="{{ not( HmiProps.HideDetails ) }}" id="Background"   >
+        <!--change x to Layout.ActualX-->
+            <hmi:include template="include.style.flat.parameterview.svghmi"  hmi-bind:for="{ HmiProps.ParameterView }"
+               hmi-bind:width="{ Layout.ActualWidth }"
+               hmi-bind:height="{ Layout.ActualHeight }" >
+                <hmi:param name="FocusColor"                 type="string"  hmi-bind:value="{ ParamProps.FocusColor }" />
+                <hmi:param name="ShowFocusVisual"            type="boolean" hmi-bind:value="{ ParamProps.ShowFocusVisual }" />
+                <hmi:param name="SearchTextHeight"           type="number" hmi-bind:value="{ LocalProps.SearchTextHeight }" />
+            </hmi:include>
+        </g>
+    </g>
+    <!--Paco combo part-->
+    <g hmi-flex:grow="0"
+       hmi-flex:width="{ Layout.ActualWidth }"
+       hmi-bind:height="{ LocalProps.MainControlHeight }"
+       hmi-flex:justifyContent="end"
+       hmi-flex:direction="{{ lt( HmiProps.Width , LocalProps.MainControlWidth ) ?  ( not(LocalProps.IsParameterSetTypeFixed) ? LocalProps.DirectionRow :  LocalProps.DirectionColumnReverse ) : ( not(LocalProps.IsParameterSetTypeFixed) ? LocalProps.DirectionRow : LocalProps.DirectionRowReverse ) }}"
+       id="TIFID_pacoMainControl">
+      <!--Search Option buttons-->
+    <g id="TIFID_SearchGroup" hmi:if="{{ and(LocalProps.SearchOptionVisible, not( HmiProps.HideDetails )) }}"  opacity="1">
+       <g>
+        <!--Search button-->
+        <g id="TIFID_SearchButton" 
+           hmi-event:down="url(#onSearchButtonMouseDown)"
+           hmi-event:mouseHover="url(#onSearchButtonMouseHover)"
+           hmi-event:up="url(#onSearchButtonMouseUp)"
+               hmi-event:mouseLeave="url(#onSearchButtonMouseLeave)"
+               hmi-bind:opacity="{{ and( and(LocalProps.SearchText != LocalProps.SearchDefaultText,LocalProps.SearchText != ''), not(LocalProps.JumpToClicked)) ? 1.0 :0.5 }}">
+          <rect x="300"
+            hmi-bind:y="{ LocalProps.JumpToButtonY }"
+            width="100"
+            hmi-bind:height="{ LocalProps.ComboHeight }"
+            hmi-bind:stroke="{{ LocalProps.SearchButtonPressed ? LocalProps.TitleTextBackColorOnPressed : LocalProps.Stroke }}"
+                    hmi-bind:fill="{ LocalProps.Stroke }"
+                    hmi-bind:fill-opacity = "{{ or( LocalProps.SearchButtonPressed, LocalProps.SearchButtonMouseHover) ? 0.8 : 1.0 }}"
+            />
+          <text id="TIFID_SearchButtonText"  x="345" hmi-bind:y="{ LocalProps.SearchButtonTextY }"
+             hmi-bind:font-size="{ HmiProps.ParameterView.Font.Size }"
+             hmi-bind:font-style="{ LocalProps.FontStyle }"
+             hmi-bind:text-decoration="{ LocalProps.TextDecoration }"
+             hmi-bind:font-weight="{ HmiProps.Font.Weight }"
+             hmi-bind:font-family="{ HmiProps.Font.Name }"
+             hmi-bind:fill="{ LocalProps.ForeColor }"
+             text-anchor="middle">
+            <hmi:text hmi-bind:value="{ LocalProps.SearchButtonText }"/>
+          </text>
+        </g>
+        <!--Jump to down button-->
+        <g id="TIFID_JumpToDownButton"
+           hmi-event:down="url(#onJumpToDownButtonMouseDown)"
+           hmi-event:mouseHover="url(#onJumpToDownButtonMouseHover)"
+           hmi-event:up="url(#onJumpToDownButtonMouseUp)"
+               hmi-event:mouseLeave="url(#onJumpToDownButtonMouseLeave)"
+           hmi-bind:opacity="{{ and( and(LocalProps.SearchText != LocalProps.SearchDefaultText,LocalProps.SearchText != ''), not(LocalProps.SearchClicked)) ?  1.0 :0.5 }}">
+          <rect x="418"
+            hmi-bind:y="{ LocalProps.JumpToButtonY }"
+            width="40"
+            hmi-bind:height="{ LocalProps.ComboHeight }"
+            hmi-bind:stroke="{{ LocalProps.JumpToDownButtonPressed ? LocalProps.TitleTextBackColorOnPressed: LocalProps.Stroke }}"
+            hmi-bind:fill="{ LocalProps.Stroke }"
+                hmi-bind:fill-opacity = "{{ or( LocalProps.JumpToDownButtonPressed, LocalProps.JumpToDownButtonMouseHover)  ? 0.8  : 1.0}}"
+           />
+          <svg width="36px" height="36px" viewBox="0 0 24 24"
+                   x="420" hmi-bind:y="{ LocalProps.JumpToButtonIconY }" >
+            <path d="M12,16.41406L5.29297,9.70703l1.41406-1.41406L12,13.58594l5.29297-5.29297l1.41406,1.41406L12,16.41406z"
+             hmi-bind:fill="{ LocalProps.ForeColor }">
+            </path>
+          </svg>
+        </g>
+        <!--Jump to up button-->
+        <g id="TIFID_JumpToUpButton" 
+           hmi-event:down="url(#onJumpToUpButtonMouseDown)"
+           hmi-event:mouseHover="url(#onJumpToUpButtonMouseHover)"
+           hmi-event:up="url(#onJumpToUpButtonMouseUp)"
+               hmi-event:mouseLeave="url(#onJumpToUpButtonMouseLeave)"
+           hmi-bind:opacity="{{ and( and(LocalProps.SearchText != LocalProps.SearchDefaultText,LocalProps.SearchText != ''), not(LocalProps.SearchClicked)) ? 1.0 :0.5 }}">
+          <rect x="467"
+             hmi-bind:y="{ LocalProps.JumpToButtonY }"
+             width="40"
+             hmi-bind:height="{ LocalProps.ComboHeight }"
+             hmi-bind:stroke="{{ LocalProps.JumpToUpButtonPressed ? LocalProps.TitleTextBackColorOnPressed : LocalProps.Stroke }}"
+             hmi-bind:fill="{ LocalProps.Stroke }"
+                   hmi-bind:fill-opacity = "{{ or( LocalProps.JumpToUpButtonPressed, LocalProps.JumpToUpButtonMouseHover) ? 0.8  : 1.0}}"
+            />
+          <svg width="36px" height="36px" viewBox="0 0 24 24"
+             x="470" hmi-bind:y="{ LocalProps.JumpToButtonIconY }">
+            <path d="M17.29297,15.70703L12,10.41406l-5.29297,5.29297l-1.41406-1.41406L12,7.58594l6.70703,6.70703L17.29297,15.70703z"
+               hmi-bind:fill="{ LocalProps.ForeColor }">
+            </path>
+          </svg>
+        </g>
+       </g>
+        <!-- Search Option -->
+        <g id="TIFID_SearchOption" hmi-event:down= "url(#onSearchTextFieldClick)"
+           display="block">
+          <rect width="270"
+            hmi-bind:height="{ LocalProps.ComboHeight }"
+            hmi-bind:stroke="{ LocalProps.Stroke }"
+            x="10"
+            hmi-bind:y="{ LocalProps.SearchTextY }"
+            hmi-bind:fill="{{ or(LocalProps.SearchText == LocalProps.SearchDefaultText, LocalProps.SearchText != '') ? Converter.RGBA( HmiProps.BackColor )  :  LocalProps.SearchFieldForeColor  }}"/>
+          <!-- Search image -->
+          <svg width="36px" height="36px" viewBox="0 0 24 24"
+             x="13" hmi-bind:y="{ LocalProps.SearchIconY }" >
+            <path d="M8.64711,4.5059c-2.28294,0-4.14121,1.85752-4.14121,4.14121c0,2.28294,1.85827,4.14121,4.14121,4.14121   s4.14121-1.85828,4.14121-4.14121C12.78832,6.36342,10.93005,4.5059,8.64711,4.5059z M8.64711,3   c3.11946,0,5.64711,2.5284,5.64711,5.64711c0,1.2382-0.39824,2.38316-1.07365,3.31382l3.77356,3.77459L15.72964,17   l-3.77477-3.77504c-0.92957,0.67274-2.07224,1.06925-3.30776,1.06925C5.52765,14.29422,3,11.76657,3,8.64711   C3,5.5284,5.52765,3,8.64711,3z"
+                        hmi-bind:fill="{ LocalProps.ForeColor }">
+            </path>
+          </svg>
+          <!-- Search textfield -->
+          <g id="TIFID_SearchTextField">
+            <hmi-element:textField
+               start-x="48"
+               hmi-bind:start-y="{{ LocalProps.SearchTextY + 12 }}"
+               width="200"
+               hmi-bind:height="{ LocalProps.ComboHeight }"
+               hmi-bind:value="{ LocalProps.SearchText }"
+               hmi-bind:fore-color="{ LocalProps.ForeColor }"
+               text-wrapping="no-wrap"
+               read-only="false"
+               hmi-bind:enabled="{{ and(LocalProps.IsEditing,LocalProps.SearchOptionVisible) ? true : false }}"
+               target="LocalProps.SearchText">
+              <hmi-feature:font hmi-bind:size="{ HmiProps.ParameterView.Font.Size }"
+                 hmi-bind:italic="{ HmiProps.Font.Italic }"
+                 hmi-bind:weight="{ HmiProps.ParameterView.Font.Weight }"
+                 hmi-bind:strike-out="{ HmiProps.Font.StrikeOut }"
+                 hmi-bind:underline="{ HmiProps.Font.Underline }"
+                 hmi-bind:name="{ HmiProps.Font.Name }"
+                                />
+            </hmi-element:textField>
+          </g>
+          <!-- Cancel button -->
+          <g id="TIFID_CancelButton" hmi-event:down="url(#onCancelClick)" hmi:if="{{  or(eq(LocalProps.SearchText, LocalProps.SearchDefaultText), not(eq(LocalProps.SearchText, ''))) }}" >
+            <rect x="250"
+              hmi-bind:y="{ LocalProps.CancelIconRectY }"
+              width="30"
+              height="30"
+              fill="none"  />
+            <svg width="200px" height="200px" viewBox="0 0 512 512"
+               x="250" hmi-bind:y="{ LocalProps.CancelIconY }">
+              <path d="M 9.15625 6.3125 L 6.3125 9.15625 L 22.15625 25 L 6.21875 40.96875 L 9.03125 43.78125 L 25 27.84375 L 40.9375 43.78125 L 43.78125 40.9375 L 27.84375 25 L 43.6875 9.15625 L 40.84375 6.3125 L 25 22.15625 Z"
+                 hmi-bind:fill="{ LocalProps.ForeColor }">
+              </path>
+            </svg>
+          </g>
+        </g>
+      </g>
+
+      <!--Parameter set combo row-->
+      <g hmi-flex:width="{{ not(LocalProps.IsParameterSetTypeFixed) ? HmiProps.Width : LocalProps.SingleCombolWidth }}"
+         hmi-flex:height="{ LocalProps.MainControlHeight }">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+           xmlns:hmi="http://svg.siemens.com/hmi/"
+           xmlns:hmi-bind="http://svg.siemens.com/hmi/bind/"
+           xmlns:hmi-data-bind="http://svg.siemens.com/hmi/data/bind/"
+           hmi-bind:height="{{ and( lt( LocalProps.ControlWidth, LocalProps.MainControlWidth - 4 ), LocalProps.IsParameterSetTypeFixed ) ? ( lt(LocalProps.ControlHeight, LocalProps.ComboHeightTillGrid ) ? LocalProps.ControlHeight / 2  : HmiProps.Height ) : LocalProps.IsControlHeightLess ? LocalProps.ControlHeight : HmiProps.Height }}"
+           hmi-event:down = "url(#onComboClicked)">
+          <!--Parameter set combo label-->
+          <text  hmi-bind:x="{ LocalProps.ComboX }"
+             hmi-bind:y="{ LocalProps.NameLblY }"
+             clip-path="url(#PsNameLblCliping)"
+             hmi-bind:font-size="{ HmiProps.Font.Size }"
+             hmi-bind:font-style="{ LocalProps.FontStyle }"
+             hmi-bind:text-decoration="{ LocalProps.TextDecoration }"
+             hmi-bind:font-weight="{ HmiProps.Font.Weight }"
+             hmi-bind:font-family="{ HmiProps.Font.Name }"
+             hmi-bind:fill="{ LocalProps.ForeColor }">
+            <hmi:text hmi-bind:value="{{ HmiProps.ParameterSetLabel == '' ? Converter.GetTextByID( 'TBID_PacoCtrl_defaultTextParamSet' ) : HmiProps.ParameterSetLabel }}"/>
+          </text>
+          <!--Parameter set number label-->
+          <text  hmi-bind:x="{ LocalProps.NumberLblX }"
+             hmi-bind:y="{ LocalProps.NameLblY }"
+             clip-path="url(#PsNumberLblCliping)"
+             hmi-bind:font-size="{ HmiProps.Font.Size }"
+             hmi-bind:font-style="{ LocalProps.FontStyle }"
+             hmi-bind:text-decoration="{ LocalProps.TextDecoration }"
+             hmi-bind:font-weight="{ HmiProps.Font.Weight }"
+             hmi-bind:font-family="{ HmiProps.Font.Name }"
+             hmi-bind:fill="{ LocalProps.ForeColor }">
+            <hmi:text hmi-bind:value="{{ HmiProps.NumberLabel == '' ? LocalProps.DefaultParamSetTypeUnitText : HmiProps.NumberLabel }}"/>
+          </text>
+          <!--Parameter set Combo part-->
+          <g  hmi-bind:opacity="{{ HmiProps.HasPendingChanges ? 0.5 : 1 }}"
+              id="TIFID_pacoPsCombo">
+            <!--Parameter set number-->
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                 xmlns:hmi="http://svg.siemens.com/hmi/"
+                 xmlns:hmi-bind="http://svg.siemens.com/hmi/bind/"
+                 xmlns:hmi-data-bind="http://svg.siemens.com/hmi/data/bind/"
+                 hmi-bind:x="{ LocalProps.NumberFieldTextXPos }"
+                 hmi-bind:y="{ LocalProps.NumberFieldTextYPos }"
+                 hmi-bind:width="{ LocalProps.NumberFieldWidth }"
+                 hmi-bind:height="{ LocalProps.NumberFieldHeight }">
+              <!--Mouse events to show hide tool tip for number field-->
+              <defs>
+                <hmi:localDef name="CurrentParameterSetID"   type="string"   hmi-bind:value="{{  Converter.FormatPattern(abs(HmiProps.CurrentParameterSetID), '{I}')  }}"/>
+                <hmi:action id="onMouseEnterPs">
+                  <hmi:sendCommand name="SHOW_TOOLTIP" type="string" hmi-bind:value="{{ HmiProps.CurrentParameterSetID ? LocalProps.CurrentParameterSetID : '' }}" hmi-bind:condition="{{ gt( (HmiProps.CurrentParameterSetID ? LocalProps.CurrentParameterSetID : '') , LocalProps.NumberToolTipDispLimit ) }}"/>
+                </hmi:action>
+                <hmi:action id="onMouseLeavePs">
+                  <hmi:sendCommand name="HIDE_TOOLTIP" />
+                </hmi:action>
+              </defs>
+              <rect x="0" y="0"
+                 hmi-bind:width="{ LocalProps.NumberFieldWidth }"
+                 hmi-bind:height="{ LocalProps.NumberFieldHeight }"
+                 hmi-bind:fill="{{ Converter.RGBA( HmiProps.BackColor ) }}"
+                 hmi-bind:stroke="{ LocalProps.Stroke }">
+              </rect>
+              <text hmi-event:mouseEnter="url(#onMouseEnterPs)"
+                 hmi-event:mouseLeave="url(#onMouseLeavePs)"
+                 hmi:if="{{ not( SysProps.IsDesignMode ) }}"
+                 dominant-baseline="middle" text-anchor="middle"
+                 hmi-bind:x="{ LocalProps.NumberFieldMidPosition }"
+                 hmi-bind:y="{ LocalProps.NumberFieldMidPosition }"
+                 hmi-bind:font-size="{ HmiProps.ParameterView.Font.Size }"
+                 hmi-bind:font-style="{ LocalProps.FontStyle }"
+                 hmi-bind:text-decoration="{ LocalProps.TextDecoration }"
+                 hmi-bind:font-weight="{ HmiProps.Font.Weight }"
+                 hmi-bind:font-family="{ HmiProps.Font.Name }"
+                 hmi-bind:fill="{ LocalProps.ForeColor }" >
+                <hmi:text hmi-bind:value="{{  Converter.TextEllipsis( HmiProps.CurrentParameterSetID ? LocalProps.CurrentParameterSetID : '', LocalProps.NumberToDisplay ) }}"/>
+              </text>
+            </svg>
+            <!--Parameter set Combo-->
+            <hmi:include template="include.style.flat.combobox.svghmi"
+                hmi-bind:x="{ LocalProps.ComboX }"
+                hmi-bind:y="{ LocalProps.ComboY }"
+                hmi-bind:width="{ LocalProps.ComboWidth }"
+                hmi-bind:height="{ LocalProps.ComboHeight }" >
+              <hmi:param name="MaxListBoxViewCount"    type="number"                   hmi-bind:value="{{ and( lt( LocalProps.ControlWidth, LocalProps.MainControlWidth - 4 ), LocalProps.IsParameterSetTypeFixed ) ?
+                                                                                                                        abs( LocalProps.ListHeightTillWindow - LocalProps.ComboHeight - LocalProps.VerticalPaddingBtwnCombo ) / LocalProps.ListItemHeight :
+                                                                                                                        LocalProps.ListHeightTillWindow / LocalProps.ListItemHeight }}" />
+              <hmi:param name="ResourceList"           type="string"                   hmi-bind:value="{ LocalProps.PsComboType }"                    />
+              <hmi:param name="Content"                type="HmiContentPart"           hmi-bind:value="{ LocalProps.MyLocalContent }"                 />
+              <hmi:param name="Font"                   type="HmiFontPart"              hmi-bind:value="{ HmiProps.ParameterView.Font }"               />
+              <hmi:param name="Padding"                type="HmiPaddingPart"           hmi-bind:value="{ LocalProps.MyLocalPadding }"                 />
+              <hmi:param name="Width"                  type="number"                   hmi-bind:value="{ LocalProps.ComboWidth }"                     />
+              <hmi:param name="Height"                 type="number"                   hmi-bind:value="{ LocalProps.ComboHeight }"                    />
+              <hmi:param name="ShowFocus"              type="boolean"                  value="false"                                                  />
+              <hmi:param name="BorderWidth"            type="number"                   value="1"                                                      />
+              <hmi:param name="FocusColor"             type="HmiColor"                 hmi-bind:value="{ HmiProps.FocusColor }"                       />
+              <hmi:param name="BorderColor"            type="HmiColor"                 value="4288059030"                                             />
+              <hmi:param name="BackColor"              type="HmiColor"                 hmi-bind:value="{ HmiProps.BackColor }"                        />
+              <hmi:param name="ForeColor"              type="HmiColor"                 hmi-bind:value="{ HmiProps.ForeColor }"                        />
+              <hmi:param name="SelectionForeColor"     type="HmiColor"                 hmi-bind:value="{ HmiProps.SelectionForeColor }"               />
+              <hmi:param name="SelectionBackColor"     type="HmiColor"                 hmi-bind:value="{ HmiProps.SelectionBackColor }"               />
+              <hmi:param name="AlternateBackColor"     type="HmiColor"                 hmi-bind:value="{ HmiProps.BackColor  }"                       />
+              <hmi:param name="CollapsedBackColor"     type="HmiColor"                 hmi-bind:value="{ HmiProps.BackColor }"                        />
+              <hmi:param name="CollapsedForeColor"     type="HmiColor"                 hmi-bind:value="{ HmiProps.ForeColor }"                        />
+              <hmi:param name="GraphicWidth"           type="number"                   value="300"                                                    />
+              <hmi:param name="GraphicHeight"          type="number"                   value="30"                                                     />
+              <hmi:param name="Enabled"                type="boolean"                  hmi-bind:value="{ HmiProps.Enabled }"                          />
+              <hmi:param name="Operability"            type="HmiOperability"           hmi-bind:value="{{ or( HmiProps.HasPendingChanges, not(HmiProps.Enabled) ) ? 1 : 0 }}"      />
+              <hmi:param name="IOFieldType"            type="HmiIOFieldType"           value="2"                                                      />
+              <hmi:param name="ResourceListDelay"      type="boolean"                  hmi-bind:value="{ LocalProps.ResourceListDelay }"              />
+              <hmi:param name="PropNameText"           type="string"                   hmi-bind:value="{ LocalProps.PropNameText }"                   />
+              <hmi:param name="PropNameGraphic"        type="string"                   hmi-bind:value="{ LocalProps.PropNameGraphic }"                />
+              <hmi:param name="PropNameGraphicWidth"   type="string"                   hmi-bind:value="{ LocalProps.PropNameGraphicWidth }"           />
+              <hmi:param name="PropNameGraphicHeight"  type="string"                   hmi-bind:value="{ LocalProps.PropNameGraphicHeight }"          />
+              <hmi:param name="CanOpenComboBox"        type="boolean"                  value="true"                                                   />
+              <hmi:param name="SelectedIndex"          type="number"                   value="-1"                                                     />
+            </hmi:include>
+          </g>
+        </svg>
+      </g>
+      <!--Parameter set type combo part-->
+      <g hmi-flex:width="{ LocalProps.SingleCombolWidth }"
+         hmi:if="{ LocalProps.IsParameterSetTypeFixed }"
+         hmi-flex:height="{ LocalProps.MainControlHeightPadding }">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+           xmlns:hmi="http://svg.siemens.com/hmi/"
+           xmlns:hmi-bind="http://svg.siemens.com/hmi/bind/"
+           xmlns:hmi-data-bind="http://svg.siemens.com/hmi/data/bind/"
+           hmi-bind:height="{{ LocalProps.IsControlHeightLess ? LocalProps.ControlHeight : HmiProps.Height }}"
+           hmi-event:down = "url(#onComboClicked)">
+          <!--Parameter set type combo label-->
+          <text  hmi-bind:x="{ LocalProps.ComboX }"
+             hmi-bind:y="{ LocalProps.NameLblY }"
+             clip-path="url(#PstNameLblCliping)"
+             hmi-bind:font-size="{ HmiProps.Font.Size }"
+             hmi-bind:font-style="{ LocalProps.FontStyle }"
+             hmi-bind:text-decoration="{ LocalProps.TextDecoration }"
+             hmi-bind:font-weight="{ HmiProps.Font.Weight }"
+             hmi-bind:font-family="{ HmiProps.Font.Name }"
+             hmi-bind:fill="{ LocalProps.ForeColor }">
+            <hmi:text hmi-bind:value="{{ HmiProps.ParameterSetTypeLabel == '' ? Converter.GetTextByID( 'TBID_PacoCtrl_defaultTextParamSetType' ) : HmiProps.ParameterSetTypeLabel}}"/>
+          </text>
+          <!--Parameter set type number label-->
+          <text  hmi-bind:x="{ LocalProps.NumberLblX }"
+             hmi-bind:y="{ LocalProps.NameLblY }"
+             clip-path="url(#PstNumberLblCliping)"
+             hmi-bind:font-size="{ HmiProps.Font.Size }"
+             hmi-bind:font-style="{ LocalProps.FontStyle }"
+             hmi-bind:text-decoration="{ LocalProps.TextDecoration }"
+             hmi-bind:font-weight="{ HmiProps.Font.Weight }"
+             hmi-bind:font-family="{ HmiProps.Font.Name }"
+             hmi-bind:fill="{ LocalProps.ForeColor }">
+            <hmi:text hmi-bind:value="{{ HmiProps.NumberLabel == '' ? LocalProps.DefaultParamSetTypeUnitText : HmiProps.NumberLabel }}"/>
+          </text>
+          <!--Parameter set type Combo part-->
+          <g  id="TIFID_pacoPstCombo">
+            <!--Parameter set type number-->
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+               xmlns:hmi="http://svg.siemens.com/hmi/"
+               xmlns:hmi-bind="http://svg.siemens.com/hmi/bind/"
+               xmlns:hmi-data-bind="http://svg.siemens.com/hmi/data/bind/"
+               hmi-bind:x="{ LocalProps.NumberFieldTextXPos }"
+               hmi-bind:y="{ LocalProps.NumberFieldTextYPos }"
+               hmi-bind:width="{ LocalProps.NumberFieldWidth }"
+               hmi-bind:height="{ LocalProps.NumberFieldHeight }">
+              <!--Mouse events to show hide tool tip for number field-->
+              <defs>
+                <hmi:localDef name="CurrentParameterSetTypeID"   type="string"   hmi-bind:value="{{  Converter.FormatPattern(abs(HmiProps.CurrentParameterSetTypeID), '{I}')  }}"/>
+                <hmi:action id="onMouseEnterPst">
+                  <hmi:sendCommand name="SHOW_TOOLTIP" type="string" hmi-bind:value="{{  HmiProps.CurrentParameterSetTypeID ? LocalProps.CurrentParameterSetTypeID : '' }}" hmi-bind:condition="{{ gt( ( HmiProps.CurrentParameterSetTypeID ? LocalProps.CurrentParameterSetTypeID : '') , LocalProps.NumberToolTipDispLimit ) }}"/>
+                </hmi:action>
+                <hmi:action id="onMouseLeavePst">
+                  <hmi:sendCommand name="HIDE_TOOLTIP" />
+                </hmi:action>
+              </defs>
+              <rect hmi-bind:width="{ LocalProps.NumberFieldWidth }"
+                 hmi-bind:height="{ LocalProps.NumberFieldHeight }"
+                 hmi-bind:fill="{{ Converter.RGBA( HmiProps.BackColor) }}"
+                 hmi-bind:stroke="{ LocalProps.Stroke }">
+              </rect>
+              <text hmi-event:mouseEnter="url(#onMouseEnterPst)"
+                 hmi-event:mouseLeave="url(#onMouseLeavePst)"
+                 dominant-baseline="middle" text-anchor="middle"
+                 hmi-bind:x="{ LocalProps.NumberFieldMidPosition }"
+                 hmi-bind:y="{ LocalProps.NumberFieldMidPosition }"
+                 hmi-bind:font-size="{ HmiProps.ParameterView.Font.Size }"
+                 hmi-bind:font-style="{ LocalProps.FontStyle }"
+                 hmi-bind:text-decoration="{ LocalProps.TextDecoration }"
+                 hmi-bind:font-weight="{ HmiProps.Font.Weight }"
+                 hmi-bind:font-family="{ HmiProps.Font.Name }"
+                 hmi-bind:fill="{ LocalProps.ForeColor }"  >
+                <hmi:text hmi-bind:value="{{ Converter.TextEllipsis( HmiProps.CurrentParameterSetTypeID ? LocalProps.CurrentParameterSetTypeID : '', LocalProps.NumberToDisplay ) }}"/>
+              </text>
+            </svg>
+            <!--Parameter set type Combo-->
+            <hmi:include template="include.style.flat.combobox.svghmi"
+                hmi-bind:x="{ LocalProps.ComboX }"
+                hmi-bind:y="{ LocalProps.ComboY }"
+                hmi-bind:width="{ LocalProps.ComboWidth }"
+                hmi-bind:height="{ LocalProps.ComboHeight }" >
+              <hmi:param name="MaxListBoxViewCount"    type="number"                   hmi-bind:value="{{ LocalProps.ListHeightTillWindow / LocalProps.ListItemHeight }}" />
+              <hmi:param name="ResourceList"           type="string"                   hmi-bind:value="{ LocalProps.PstComboType }"                                       />
+              <hmi:param name="Content"                type="HmiContentPart"           hmi-bind:value="{ LocalProps.MyLocalContent }"                                     />
+              <hmi:param name="Font"                   type="HmiFontPart"              hmi-bind:value="{ HmiProps.ParameterView.Font }"                                   />
+              <hmi:param name="Padding"                type="HmiPaddingPart"           hmi-bind:value="{ LocalProps.MyLocalPadding }"                                     />
+              <hmi:param name="Width"                  type="number"                   hmi-bind:value="{ LocalProps.ComboWidth }"                                         />
+              <hmi:param name="Height"                 type="number"                   hmi-bind:value="{ LocalProps.ComboHeight }"                                        />
+              <hmi:param name="ShowFocus"              type="boolean"                  value="false"                                                                      />
+              <hmi:param name="BorderWidth"            type="number"                   value="1"                                                                          />
+              <hmi:param name="FocusColor"             type="HmiColor"                 hmi-bind:value="{ HmiProps.FocusColor }"                                           />
+              <hmi:param name="BorderColor"            type="HmiColor"                 value="4288059030"                                                                 />
+              <hmi:param name="BackColor"              type="HmiColor"                 hmi-bind:value="{ HmiProps.BackColor }"                                            />
+              <hmi:param name="ForeColor"              type="HmiColor"                 hmi-bind:value="{ HmiProps.ForeColor }"                                            />
+              <hmi:param name="AlternateBackColor"     type="HmiColor"                 hmi-bind:value="{ HmiProps.BackColor }"                                            />
+              <hmi:param name="SelectionForeColor"     type="HmiColor"                 hmi-bind:value="{ HmiProps.SelectionForeColor }"                                   />
+              <hmi:param name="SelectionBackColor"     type="HmiColor"                 hmi-bind:value="{ HmiProps.SelectionBackColor }"                                   />
+              <hmi:param name="CollapsedBackColor"     type="HmiColor"                 hmi-bind:value="{ HmiProps.BackColor }"                                            />
+              <hmi:param name="CollapsedForeColor"     type="HmiColor"                 hmi-bind:value="{ HmiProps.ForeColor }"                                            />
+              <hmi:param name="GraphicWidth"           type="number"                   value="300"                                                                        />
+              <hmi:param name="GraphicHeight"          type="number"                   value="30"                                                                         />
+              <hmi:param name="Enabled"                type="boolean"                  hmi-bind:value="{ HmiProps.Enabled }"                                              />
+              <hmi:param name="Operability"            type="HmiOperability"           hmi-bind:value="{{ or( not(HmiProps.Enabled), or( HmiProps.ParameterSetTypeFixed , HmiProps.HasPendingChanges )) ? 1 : 0 }}" />
+              <hmi:param name="IOFieldType"            type="HmiIOFieldType"           value="2"                                                                          />
+              <hmi:param name="ResourceListDelay"      type="boolean"                  hmi-bind:value="{ LocalProps.ResourceListDelay }"                                  />
+              <hmi:param name="PropNameText"           type="string"                   hmi-bind:value="{ LocalProps.PropNameText }"                                       />
+              <hmi:param name="PropNameGraphic"        type="string"                   hmi-bind:value="{ LocalProps.PropNameGraphic }"                                    />
+              <hmi:param name="PropNameGraphicWidth"   type="string"                   hmi-bind:value="{ LocalProps.PropNameGraphicWidth }"                               />
+              <hmi:param name="PropNameGraphicHeight"  type="string"                   hmi-bind:value="{ LocalProps.PropNameGraphicHeight }"                              />
+              <hmi:param name="CanOpenComboBox"        type="boolean"                  value="true"                                                                       />
+              <hmi:param name="SelectedIndex"          type="number"                   value="-1"                                                                         />
+            </hmi:include>
+          </g>
+        </svg>
+      </g>
+    </g>
+  </g>
+</svg>

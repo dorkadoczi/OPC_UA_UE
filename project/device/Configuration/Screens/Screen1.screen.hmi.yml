@@ -1,0 +1,20 @@
+#Version: 2.0
+
+Screens:
+  Screen1:
+    Height: 1024
+    Width: 1280
+    Layers:
+      BaseLayer:
+        # Items:
+          ## Place screen items here, e.g.:
+          # MyButton:
+          #   ObjectType: Button
+          #   Text: MyTextLibrary.Entry_1
+          #   Top: 100
+          #   Left: 100
+          #   Width: 160          
+          #   Height: 40
+          #
+          #
+          # For more information, see: https://docu.simatic-ue.siemens.io/learn/documentation/reference/winccml/webpage_docs/winccml-reference/LanguageReferenceFiles/Output/6_SCREEN/
