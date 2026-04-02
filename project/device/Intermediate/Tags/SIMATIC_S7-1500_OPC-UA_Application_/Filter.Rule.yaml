@@ -1,0 +1,62 @@
+Version: "1.0"
+Description: "Template for Filter Rules - edit this file to define your own filtering logic for intermediate YAML objects."
+Filters:
+  Tags:
+    Include:
+      Conditions:
+        - bIsOverflow:
+            - Field: DataType
+              Value: Bool
+            - Field: Name
+              Value: bIsOverflow
+        - cVolume_Percent:
+            # - Field: DataType
+            #   Value: Byte
+            - Field: Name
+              Value: cVolume_Percent
+        - inputValve:
+            # - Field: DataType
+            #   Value: Valve
+            - Field: Name
+              Value: inputValve
+        - LdtLastOverflow:
+            # - Field: DataType
+            #   Value: Bool
+            - Field: Name
+              Value: LdtLastOverflow
+        - outputValve:           
+            # - Field: DataType
+            #   Value: outputValve
+            - Field: Name
+              Value: outputValve
+        - rFillRate:
+            # - Field: DataType
+            #   Value: Float
+            - Field: Name
+              Value: rFillRate
+        - rVolume_Current:
+            # - Field: DataType
+            #   Value: Float 
+            - Field: Name
+              Value: rVolume_Current     
+        - rVolume_Max:
+            # - Field: DataType
+            #   Value: Float
+            - Field: Name
+              Value: rVolume_Max
+        - strCurrentStatus:
+            # - Field: DataType
+            #   Value: String
+            - Field: Name
+              Value: strCurrentStatus
+
+
+
+# How to use this template:
+# - Each 'ConditionGroupName' (e.g. NamesStartingWithMotor) is a group of AND-ed field conditions.
+# - Multiple groups under 'Conditions' are OR-ed together.
+# - 'Field' specifies the attribute to filter on.
+# - 'Value' is the expected value or pattern.
+# - 'Pattern' defines the match type (Wildcard, Equals, etc).
+# - Edit/add/remove groups and conditions as needed for your use case.
+# - You can add more object types (e.g., StructureTags) under 'Filters:' as needed.

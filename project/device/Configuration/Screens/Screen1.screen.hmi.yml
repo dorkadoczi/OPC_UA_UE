@@ -6,6 +6,1380 @@ Screens:
     Width: 1280
     Layers:
       BaseLayer:
+        Items:
+          HmiRectangle_1:
+            ObjectType: Rectangle
+            Left: 412
+            Top: 101
+            Height: 156
+            Width: 211
+          AlarmControl_1:
+            ObjectType: AlarmControl
+            Left: 533
+            StyleItemClass: HmiAlarmControl
+            Top: 579
+            Height: 364
+            Width: 747
+            AlarmSourceType: LoggedAlarms
+            AlarmStatisticsView:
+              Columns:
+                GroupID:
+                  ObjectType: AlarmStatisticColumnPart
+                  Visible: False
+                  AlarmStatisticBlock: Group
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.GroupID
+                ID:
+                  ObjectType: AlarmStatisticColumnPart
+                  Visible: True
+                  AlarmStatisticBlock: ID
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.ID
+                Name:
+                  ObjectType: AlarmStatisticColumnPart
+                  Visible: True
+                  AlarmStatisticBlock: Name
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.Name
+                AlarmClass:
+                  ObjectType: AlarmStatisticColumnPart
+                  Visible: False
+                  AlarmStatisticBlock: Class
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.Class
+                Priority:
+                  ObjectType: AlarmStatisticColumnPart
+                  Visible: False
+                  AlarmStatisticBlock: Priority
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.Priority
+                Group:
+                  ObjectType: AlarmStatisticColumnPart
+                  Visible: False
+                  AlarmStatisticBlock: Group
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.Group
+                Origin:
+                  ObjectType: AlarmStatisticColumnPart
+                  Visible: True
+                  AlarmStatisticBlock: Origin
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.Origin
+                Area:
+                  ObjectType: AlarmStatisticColumnPart
+                  Visible: True
+                  AlarmStatisticBlock: Area
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.Area
+                Comments:
+                  ObjectType: AlarmStatisticColumnPart
+                  Visible: False
+                  AlarmStatisticBlock: Comments
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.Comments
+                Information:
+                  ObjectType: AlarmStatisticColumnPart
+                  Visible: False
+                  AlarmStatisticBlock: Information
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.Information
+                LoopInAlarm:
+                  ObjectType: AlarmStatisticColumnPart
+                  Visible: False
+                  AlarmStatisticBlock: LoopInAlarm
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.LoopInAlarm
+                EventText:
+                  ObjectType: AlarmStatisticColumnPart
+                  Visible: True
+                  AlarmStatisticBlock: EventText
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.EventText
+                AlarmText1:
+                  ObjectType: AlarmStatisticColumnPart
+                  Visible: False
+                  AlarmStatisticBlock: AlarmText1
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.AlarmText1
+                AlarmText2:
+                  ObjectType: AlarmStatisticColumnPart
+                  Visible: False
+                  AlarmStatisticBlock: AlarmText2
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.AlarmText2
+                AlarmText3:
+                  ObjectType: AlarmStatisticColumnPart
+                  Visible: False
+                  AlarmStatisticBlock: AlarmText3
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.AlarmText3
+                AlarmText4:
+                  ObjectType: AlarmStatisticColumnPart
+                  Visible: False
+                  AlarmStatisticBlock: AlarmText4
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.AlarmText4
+                AlarmText5:
+                  ObjectType: AlarmStatisticColumnPart
+                  Visible: False
+                  AlarmStatisticBlock: AlarmText5
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.AlarmText5
+                AlarmText6:
+                  ObjectType: AlarmStatisticColumnPart
+                  Visible: False
+                  AlarmStatisticBlock: AlarmText6
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.AlarmText6
+                AlarmText7:
+                  ObjectType: AlarmStatisticColumnPart
+                  Visible: False
+                  AlarmStatisticBlock: AlarmText7
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.AlarmText7
+                AlarmText8:
+                  ObjectType: AlarmStatisticColumnPart
+                  Visible: False
+                  AlarmStatisticBlock: AlarmText8
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.AlarmText8
+                AlarmText9:
+                  ObjectType: AlarmStatisticColumnPart
+                  Visible: False
+                  AlarmStatisticBlock: AlarmText9
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.AlarmText9
+                AlarmState:
+                  ObjectType: AlarmStatisticColumnPart
+                  Visible: False
+                  AlarmStatisticBlock: AlarmState
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.AlarmState
+                ModificationTime:
+                  ObjectType: AlarmStatisticColumnPart
+                  Visible: False
+                  AlarmStatisticBlock: ModificationTime
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.ModificationTime
+                RaiseTime:
+                  ObjectType: AlarmStatisticColumnPart
+                  Visible: False
+                  AlarmStatisticBlock: RaiseTime
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.RaiseTime
+                AcknowledgeTime:
+                  ObjectType: AlarmStatisticColumnPart
+                  Visible: False
+                  AlarmStatisticBlock: AcknowledgeTime
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.AcknowledgeTime
+                ClearTime:
+                  ObjectType: AlarmStatisticColumnPart
+                  Visible: False
+                  AlarmStatisticBlock: ClearTime
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.ClearTime
+                ResetTime:
+                  ObjectType: AlarmStatisticColumnPart
+                  Visible: False
+                  AlarmStatisticBlock: ResetTime
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.ResetTime
+                SuppressionState:
+                  ObjectType: AlarmStatisticColumnPart
+                  Visible: False
+                  AlarmStatisticBlock: SuppressionState
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.SuppressionState
+                EscalationLevel:
+                  ObjectType: AlarmStatisticColumnPart
+                  Visible: False
+                  AlarmStatisticBlock: EscalationLevel
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.EscalationLevel
+                Context:
+                  ObjectType: AlarmStatisticColumnPart
+                  Visible: False
+                  AlarmStatisticBlock: Context
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.Context
+                Duration:
+                  ObjectType: AlarmStatisticColumnPart
+                  Visible: False
+                  AlarmStatisticBlock: Duration
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.Duration
+                AcknowledgmentState:
+                  ObjectType: AlarmStatisticColumnPart
+                  Visible: False
+                  AlarmStatisticBlock: AcknowledgmentState
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.AcknowledgmentState
+                Value:
+                  ObjectType: AlarmStatisticColumnPart
+                  Visible: False
+                  AlarmStatisticBlock: Value
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.Value
+                ValueQuality:
+                  ObjectType: AlarmStatisticColumnPart
+                  Visible: False
+                  AlarmStatisticBlock: ValueQuality
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.ValueQuality
+                ValueLimit:
+                  ObjectType: AlarmStatisticColumnPart
+                  Visible: False
+                  AlarmStatisticBlock: ValueLimit
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.ValueLimit
+                TagName:
+                  ObjectType: AlarmStatisticColumnPart
+                  Visible: False
+                  AlarmStatisticBlock: TagName
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.TagName
+                Computer:
+                  ObjectType: AlarmStatisticColumnPart
+                  Visible: False
+                  AlarmStatisticBlock: Computer
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.Computer
+                User:
+                  ObjectType: AlarmStatisticColumnPart
+                  Visible: False
+                  AlarmStatisticBlock: User
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.User
+                ProcessValue1:
+                  ObjectType: AlarmStatisticColumnPart
+                  Visible: False
+                  AlarmStatisticBlock: ProcessValue1
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.ProcessValue1
+                ProcessValue2:
+                  ObjectType: AlarmStatisticColumnPart
+                  Visible: False
+                  AlarmStatisticBlock: ProcessValue2
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.ProcessValue2
+                ProcessValue3:
+                  ObjectType: AlarmStatisticColumnPart
+                  Visible: False
+                  AlarmStatisticBlock: ProcessValue3
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.ProcessValue3
+                ProcessValue4:
+                  ObjectType: AlarmStatisticColumnPart
+                  Visible: False
+                  AlarmStatisticBlock: ProcessValue4
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.ProcessValue4
+                ProcessValue5:
+                  ObjectType: AlarmStatisticColumnPart
+                  Visible: False
+                  AlarmStatisticBlock: ProcessValue5
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.ProcessValue5
+                ProcessValue6:
+                  ObjectType: AlarmStatisticColumnPart
+                  Visible: False
+                  AlarmStatisticBlock: ProcessValue6
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.ProcessValue6
+                ProcessValue7:
+                  ObjectType: AlarmStatisticColumnPart
+                  Visible: False
+                  AlarmStatisticBlock: ProcessValue7
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.ProcessValue7
+                ProcessValue8:
+                  ObjectType: AlarmStatisticColumnPart
+                  Visible: False
+                  AlarmStatisticBlock: ProcessValue8
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.ProcessValue8
+                ProcessValue9:
+                  ObjectType: AlarmStatisticColumnPart
+                  Visible: False
+                  AlarmStatisticBlock: ProcessValue9
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.ProcessValue9
+                ProcessValue10:
+                  ObjectType: AlarmStatisticColumnPart
+                  Visible: False
+                  AlarmStatisticBlock: ProcessValue10
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.ProcessValue10
+                ClassSymbol:
+                  ObjectType: AlarmStatisticColumnPart
+                  Visible: False
+                  AlarmStatisticBlock: ClassSymbol
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.ClassSymbol
+                StateText:
+                  ObjectType: AlarmStatisticColumnPart
+                  Visible: False
+                  AlarmStatisticBlock: StateText
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.StateText
+                AverageRaisedRaised:
+                  ObjectType: AlarmStatisticColumnPart
+                  Visible: False
+                  AlarmStatisticBlock: AverageRaisedRaised
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.AverageRaisedRaised
+                AverageRaisedCleared:
+                  ObjectType: AlarmStatisticColumnPart
+                  Visible: False
+                  AlarmStatisticBlock: AverageRaisedCleared
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.AverageRaisedCleared
+                AverageRaisedAcknowledged:
+                  ObjectType: AlarmStatisticColumnPart
+                  Visible: False
+                  AlarmStatisticBlock: AverageRaisedAcknowledged
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.AverageRaisedAcknowledged
+                Frequency:
+                  ObjectType: AlarmStatisticColumnPart
+                  Visible: False
+                  AlarmStatisticBlock: Frequency
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.Frequency
+                SumRaisedRaised:
+                  ObjectType: AlarmStatisticColumnPart
+                  Visible: False
+                  AlarmStatisticBlock: SumRaisedRaised
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.SumRaisedRaised
+                SumRaisedCleared:
+                  ObjectType: AlarmStatisticColumnPart
+                  Visible: False
+                  AlarmStatisticBlock: SumRaisedCleared
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.SumRaisedCleared
+            ToolBar:
+              Elements:
+                ShowActiveAlarms:
+                  ObjectType: ControlBarToggleSwitchPart
+                  IsAlternateState: True
+                  Visible: True
+                  Enabled: True
+                  Mapping: ShowActiveAlarms
+                ShowLoggedAlarms:
+                  ObjectType: ControlBarToggleSwitchPart
+                  IsAlternateState: False
+                  Visible: True
+                  Enabled: True
+                  Mapping: ShowLoggedAlarms
+                ShowLoggedAlarmsUpdated:
+                  ObjectType: ControlBarToggleSwitchPart
+                  IsAlternateState: False
+                  Visible: True
+                  Enabled: True
+                  Mapping: ShowLoggedAlarmsUpdated
+                ShowDefinedAlarms:
+                  ObjectType: ControlBarToggleSwitchPart
+                  IsAlternateState: False
+                  Visible: True
+                  Enabled: True
+                  Mapping: ShowDefinedAlarms
+                AlarmStatisticsView:
+                  ObjectType: ControlBarToggleSwitchPart
+                  IsAlternateState: False
+                  Visible: False
+                  Enabled: True
+                  Mapping: AlarmStatisticsView
+                AlarmAnnunciator:
+                  ObjectType: ControlBarButtonPart
+                  Visible: False
+                  Enabled: False
+                  Mapping: AlarmAnnunciator
+                FirstLine:
+                  ObjectType: ControlBarButtonPart
+                  Visible: True
+                  Enabled: False
+                  Mapping: FirstLine
+                PreviousLine:
+                  ObjectType: ControlBarButtonPart
+                  Visible: True
+                  Enabled: False
+                  Mapping: PreviousLine
+                NextLine:
+                  ObjectType: ControlBarButtonPart
+                  Visible: True
+                  Enabled: False
+                  Mapping: NextLine
+                LastLine:
+                  ObjectType: ControlBarButtonPart
+                  Visible: True
+                  Enabled: False
+                  Mapping: LastLine
+                MoveToNextAcknowledgeableAlarm:
+                  ObjectType: ControlBarButtonPart
+                  Visible: False
+                  Enabled: False
+                  Mapping: MoveToNextAcknowledgeableAlarm
+                PreviousPage:
+                  ObjectType: ControlBarButtonPart
+                  Visible: False
+                  Enabled: False
+                  Mapping: PreviousPage
+                NextPage:
+                  ObjectType: ControlBarButtonPart
+                  Visible: False
+                  Enabled: False
+                  Mapping: NextPage
+                SingleAcknowledgment:
+                  ObjectType: ControlBarButtonPart
+                  Visible: True
+                  Enabled: True
+                  Mapping: SingleAcknowledgment
+                GroupAcknowledgment:
+                  ObjectType: ControlBarButtonPart
+                  Visible: True
+                  Enabled: True
+                  Mapping: GroupAcknowledgment
+                SingleReset:
+                  ObjectType: ControlBarButtonPart
+                  Visible: True
+                  Enabled: True
+                  Mapping: SingleReset
+                AlwaysShowRecent:
+                  ObjectType: ControlBarToggleSwitchPart
+                  IsAlternateState: False
+                  Visible: True
+                  Enabled: True
+                  Mapping: AlwaysShowRecent
+                InfoTextSetup:
+                  ObjectType: ControlBarButtonPart
+                  Visible: False
+                  Enabled: False
+                  Mapping: InfoTextSetup
+                CommentsSetup:
+                  ObjectType: ControlBarButtonPart
+                  Visible: False
+                  Enabled: False
+                  Mapping: CommentsSetup
+                StatisticsSetup:
+                  ObjectType: ControlBarButtonPart
+                  Visible: True
+                  Enabled: False
+                  Mapping: StatisticsSetup
+                DisableAlarm:
+                  ObjectType: ControlBarButtonPart
+                  Visible: False
+                  Enabled: False
+                  Mapping: DisableAlarm
+                EnableAlarm:
+                  ObjectType: ControlBarButtonPart
+                  Visible: False
+                  Enabled: False
+                  Mapping: EnableAlarm
+                ShelveAlarm:
+                  ObjectType: ControlBarButtonPart
+                  Visible: False
+                  Enabled: True
+                  Mapping: ShelveAlarm
+                UnshelveAlarm:
+                  ObjectType: ControlBarButtonPart
+                  Visible: False
+                  Enabled: True
+                  Mapping: UnshelveAlarm
+                CopyLines:
+                  ObjectType: ControlBarButtonPart
+                  Visible: False
+                  Enabled: False
+                  Mapping: CopyLines
+                TimeBaseSetup:
+                  ObjectType: ControlBarButtonPart
+                  Visible: False
+                  Enabled: True
+                  Mapping: TimeBaseSetup
+                SelectionDisplay:
+                  ObjectType: ControlBarButtonPart
+                  Visible: True
+                  Enabled: True
+                  Mapping: SelectionDisplay
+                SortSetup:
+                  ObjectType: ControlBarButtonPart
+                  Visible: True
+                  Enabled: True
+                  Mapping: SortSetup
+                DisplayOptionsSetup:
+                  ObjectType: ControlBarButtonPart
+                  Visible: False
+                  Enabled: True
+                  Mapping: DisplayOptionsSetup
+                DisabledAlarmsSetup:
+                  ObjectType: ControlBarButtonPart
+                  Visible: False
+                  Enabled: False
+                  Mapping: DisabledAlarmsSetup
+                Export:
+                  ObjectType: ControlBarButtonPart
+                  Visible: False
+                  Enabled: True
+                  Mapping: Export
+                SelectContext:
+                  ObjectType: ControlBarButtonPart
+                  Visible: False
+                  Enabled: True
+                  Mapping: SelectContext
+            AlarmView:
+              Columns:
+                ID:
+                  ObjectType: AlarmColumnPart
+                  Visible: False
+                  AlarmBlock: ID
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.ID
+                Name:
+                  ObjectType: AlarmColumnPart
+                  Visible: False
+                  AlarmBlock: Name
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.Name
+                Class:
+                  ObjectType: AlarmColumnPart
+                  Visible: True
+                  AlarmBlock: Class
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.Class
+                Priority:
+                  ObjectType: AlarmColumnPart
+                  Visible: False
+                  AlarmBlock: Priority
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.Priority
+                Group:
+                  ObjectType: AlarmColumnPart
+                  Visible: False
+                  AlarmBlock: Group
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.Group
+                Origin:
+                  ObjectType: AlarmColumnPart
+                  Visible: True
+                  AlarmBlock: Origin
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.Origin
+                Area:
+                  ObjectType: AlarmColumnPart
+                  Visible: True
+                  AlarmBlock: Area
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.Area
+                Comments:
+                  ObjectType: AlarmColumnPart
+                  Visible: False
+                  AlarmBlock: Comments
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.Comments
+                Information:
+                  ObjectType: AlarmColumnPart
+                  Visible: False
+                  AlarmBlock: Information
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.Information
+                LoopInAlarm:
+                  ObjectType: AlarmColumnPart
+                  Visible: False
+                  AlarmBlock: LoopInAlarm
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.LoopInAlarm
+                EventText:
+                  ObjectType: AlarmColumnPart
+                  Visible: True
+                  AlarmBlock: EventText
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.EventText
+                AlarmText1:
+                  ObjectType: AlarmColumnPart
+                  Visible: False
+                  AlarmBlock: AlarmText1
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.AlarmText1
+                AlarmText2:
+                  ObjectType: AlarmColumnPart
+                  Visible: False
+                  AlarmBlock: AlarmText2
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.AlarmText2
+                AlarmText3:
+                  ObjectType: AlarmColumnPart
+                  Visible: False
+                  AlarmBlock: AlarmText3
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.AlarmText3
+                AlarmText4:
+                  ObjectType: AlarmColumnPart
+                  Visible: False
+                  AlarmBlock: AlarmText4
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.AlarmText4
+                AlarmText5:
+                  ObjectType: AlarmColumnPart
+                  Visible: False
+                  AlarmBlock: AlarmText5
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.AlarmText5
+                AlarmText6:
+                  ObjectType: AlarmColumnPart
+                  Visible: False
+                  AlarmBlock: AlarmText6
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.AlarmText6
+                AlarmText7:
+                  ObjectType: AlarmColumnPart
+                  Visible: False
+                  AlarmBlock: AlarmText7
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.AlarmText7
+                AlarmText8:
+                  ObjectType: AlarmColumnPart
+                  Visible: False
+                  AlarmBlock: AlarmText8
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.AlarmText8
+                AlarmText9:
+                  ObjectType: AlarmColumnPart
+                  Visible: False
+                  AlarmBlock: AlarmText9
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.AlarmText9
+                AlarmState:
+                  ObjectType: AlarmColumnPart
+                  Visible: False
+                  AlarmBlock: AlarmState
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.AlarmState
+                ModificationTime:
+                  ObjectType: AlarmColumnPart
+                  Visible: False
+                  AlarmBlock: ModificationTime
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.ModificationTime
+                RaiseTime:
+                  ObjectType: AlarmColumnPart
+                  Visible: False
+                  AlarmBlock: RaiseTime
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.RaiseTime
+                AcknowledgeTime:
+                  ObjectType: AlarmColumnPart
+                  Visible: False
+                  AlarmBlock: AcknowledgeTime
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.AcknowledgeTime
+                ClearTime:
+                  ObjectType: AlarmColumnPart
+                  Visible: False
+                  AlarmBlock: ClearTime
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.ClearTime
+                ResetTime:
+                  ObjectType: AlarmColumnPart
+                  Visible: False
+                  AlarmBlock: ResetTime
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.ResetTime
+                SuppressionState:
+                  ObjectType: AlarmColumnPart
+                  Visible: False
+                  AlarmBlock: SuppresionsState
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.SuppressionState
+                EscalationLevel:
+                  ObjectType: AlarmColumnPart
+                  Visible: False
+                  AlarmBlock: EscalationLevel
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.EscalationLevel
+                Context:
+                  ObjectType: AlarmColumnPart
+                  Visible: False
+                  AlarmBlock: Context
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.Context
+                Duration:
+                  ObjectType: AlarmColumnPart
+                  Visible: False
+                  AlarmBlock: Duration
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.Duration
+                AcknowledgmentState:
+                  ObjectType: AlarmColumnPart
+                  Visible: False
+                  AlarmBlock: AcknowledgmentState
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.AcknowledgmentState
+                Value:
+                  ObjectType: AlarmColumnPart
+                  Visible: False
+                  AlarmBlock: Value
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.Value
+                ValueQuality:
+                  ObjectType: AlarmColumnPart
+                  Visible: False
+                  AlarmBlock: ValueQuality
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.ValueQuality
+                ValueLimit:
+                  ObjectType: AlarmColumnPart
+                  Visible: False
+                  AlarmBlock: ValueLimit
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.ValueLimit
+                HostName:
+                  ObjectType: AlarmColumnPart
+                  Visible: False
+                  AlarmBlock: HostName
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.HostName
+                UserName:
+                  ObjectType: AlarmColumnPart
+                  Visible: False
+                  AlarmBlock: UserName
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.UserName
+                ProcessValue1:
+                  ObjectType: AlarmColumnPart
+                  Visible: False
+                  AlarmBlock: ProcessValue1
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.ProcessValue1
+                ProcessValue2:
+                  ObjectType: AlarmColumnPart
+                  Visible: False
+                  AlarmBlock: ProcessValue2
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.ProcessValue2
+                ProcessValue3:
+                  ObjectType: AlarmColumnPart
+                  Visible: False
+                  AlarmBlock: ProcessValue3
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.ProcessValue3
+                ProcessValue4:
+                  ObjectType: AlarmColumnPart
+                  Visible: False
+                  AlarmBlock: ProcessValue4
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.ProcessValue4
+                ProcessValue5:
+                  ObjectType: AlarmColumnPart
+                  Visible: False
+                  AlarmBlock: ProcessValue5
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.ProcessValue5
+                ProcessValue6:
+                  ObjectType: AlarmColumnPart
+                  Visible: False
+                  AlarmBlock: ProcessValue6
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.ProcessValue6
+                ProcessValue7:
+                  ObjectType: AlarmColumnPart
+                  Visible: False
+                  AlarmBlock: ProcessValue7
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.ProcessValue7
+                ProcessValue8:
+                  ObjectType: AlarmColumnPart
+                  Visible: False
+                  AlarmBlock: ProcessValue8
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.ProcessValue8
+                ProcessValue9:
+                  ObjectType: AlarmColumnPart
+                  Visible: False
+                  AlarmBlock: ProcessValue9
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.ProcessValue9
+                ProcessValue10:
+                  ObjectType: AlarmColumnPart
+                  Visible: False
+                  AlarmBlock: ProcessValue10
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.ProcessValue10
+                ClassSymbol:
+                  ObjectType: AlarmColumnPart
+                  Visible: False
+                  AlarmBlock: ClassSymbol
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.ClassSymbol
+                StateText:
+                  ObjectType: AlarmColumnPart
+                  Visible: True
+                  AlarmBlock: StateText
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.StateText
+                GroupID:
+                  ObjectType: AlarmColumnPart
+                  Visible: False
+                  AlarmBlock: GroupID
+                  Width: 100
+                  Header:
+                    Text: PredefinedScreenItemHeaders.GroupID
+            StatusBar:
+              Elements:
+                TimeBase:
+                  ObjectType: ControlBarDisplayPart
+                  Visible: False
+                  Enabled: True
+                  Mapping: TimeBase
+                Date:
+                  ObjectType: ControlBarLabelPart
+                  Visible: False
+                  Enabled: True
+                  Mapping: Date
+                Time:
+                  ObjectType: ControlBarLabelPart
+                  Visible: False
+                  Enabled: True
+                  Mapping: Time
+                PendingAlarms:
+                  ObjectType: ControlBarLabelPart
+                  Visible: False
+                  Enabled: True
+                  Mapping: PendingAlarms
+                Alarms:
+                  ObjectType: ControlBarLabelPart
+                  Visible: False
+                  Enabled: True
+                  Mapping: Alarms
+                PendingAcknowledgeableAlarms:
+                  ObjectType: ControlBarLabelPart
+                  Visible: True
+                  Enabled: True
+                  Mapping: PendingAcknowledgeableAlarms
+                PendingShelvedAlarms:
+                  ObjectType: ControlBarLabelPart
+                  Visible: False
+                  Enabled: True
+                  Mapping: PendingShelvedAlarms
+                Selection:
+                  ObjectType: ControlBarDisplayPart
+                  Visible: False
+                  Enabled: True
+                  Mapping: Selection
+                DisplayOption:
+                  ObjectType: ControlBarDisplayPart
+                  Visible: False
+                  Enabled: True
+                  Mapping: DisplayOption
+                Disabled:
+                  ObjectType: ControlBarLabelPart
+                  Visible: False
+                  Enabled: True
+                  Mapping: Disabled
+                HasPendingShelvedAlarms:
+                  ObjectType: ControlBarLabelPart
+                  Visible: False
+                  Enabled: True
+                  Mapping: HasPendingShelvedAlarms
+                ConnectionStatus:
+                  ObjectType: ControlBarDisplayPart
+                  Visible: True
+                  Enabled: True
+                  Mapping: ConnectionStatus
+                StartTime:
+                  ObjectType: ControlBarLabelPart
+                  Visible: False
+                  Enabled: True
+                  Mapping: StartTime
+                EndTime:
+                  ObjectType: ControlBarLabelPart
+                  Visible: False
+                  Enabled: True
+                  Mapping: EndTime
+                CurrentContextHint:
+                  ObjectType: ControlBarLabelPart
+                  Visible: False
+                  Enabled: True
+                  Mapping: CurrentContextHint
+                StatusText:
+                  ObjectType: ControlBarLabelPart
+                  Visible: False
+                  Enabled: True
+                  Mapping: StatusText
+                PendingResettableAlarms:
+                  ObjectType: ControlBarLabelPart
+                  Visible: False
+                  Enabled: True
+                  Mapping: PendingResettableAlarms
+          Tank2_1:
+            ObjectType: CustomWidgetContainer
+            ContainedType: Tank2
+            Left: 123
+            Top: 296
+            Height: 482
+            Width: 223
+          HmiBar_1:
+            ObjectType: Bar
+            Left: 159
+            Top: 343
+            Height: 389
+            Width: 152
+            BarMode: Unicolor
+            ProcessValueIndicatorMode: Bar
+            TrendIndicatorColor: 0xFF3253BE
+            NormalRangeColor: 0xFF3238BE
+            ProcessValue AS String: ''
+            StraightScale:
+              AutoScaling: True
+              BeginValue: 0
+              EndValue: 300
+              DivisionCount: 10
+            Dynamics:
+              TagDynamic_1:
+                ObjectType: TagDynamic
+                Property: .#ProcessValue
+                Direction: biDirectional
+                Indirect: False
+                Tag: ServerInterfaces_Server_Interface_1_tank_rVolume_Current
+          TrendControl_1:
+            ObjectType: TrendControl
+            Left: 607
+            StyleItemClass: HmiTrendControl
+            Top: 259
+            Height: 320
+            Width: 640
+            ToolBar:
+              Elements:
+                FirstRecord:
+                  ObjectType: ControlBarButtonPart
+                  Visible: True
+                  Enabled: False
+                  Mapping: FirstRecord
+                PreviousRecord:
+                  ObjectType: ControlBarButtonPart
+                  Visible: True
+                  Enabled: False
+                  Mapping: PreviousRecord
+                StartStop:
+                  ObjectType: ControlBarToggleSwitchPart
+                  IsAlternateState: False
+                  Visible: True
+                  Enabled: True
+                  Mapping: StartStop
+                NextRecord:
+                  ObjectType: ControlBarButtonPart
+                  Visible: True
+                  Enabled: False
+                  Mapping: NextRecord
+                LastRecord:
+                  ObjectType: ControlBarButtonPart
+                  Visible: True
+                  Enabled: False
+                  Mapping: LastRecord
+                PreviousTrend:
+                  ObjectType: ControlBarButtonPart
+                  Visible: False
+                  Enabled: True
+                  Mapping: PreviousTrend
+                NextTrend:
+                  ObjectType: ControlBarButtonPart
+                  Visible: False
+                  Enabled: True
+                  Mapping: NextTrend
+                Ruler:
+                  ObjectType: ControlBarToggleSwitchPart
+                  IsAlternateState: True
+                  Visible: True
+                  Enabled: True
+                  Mapping: Ruler
+                ZoomTimeAxisPlusMinus:
+                  ObjectType: ControlBarToggleSwitchPart
+                  IsAlternateState: False
+                  Visible: True
+                  Enabled: True
+                  Mapping: ZoomTimeAxisPlusMinus
+                ZoomValueAxisPlusMinus:
+                  ObjectType: ControlBarToggleSwitchPart
+                  IsAlternateState: False
+                  Visible: False
+                  Enabled: True
+                  Mapping: ZoomValueAxisPlusMinus
+                ZoomArea:
+                  ObjectType: ControlBarToggleSwitchPart
+                  IsAlternateState: False
+                  Visible: True
+                  Enabled: True
+                  Mapping: ZoomArea
+                ZoomPlusMinus:
+                  ObjectType: ControlBarToggleSwitchPart
+                  IsAlternateState: False
+                  Visible: False
+                  Enabled: True
+                  Mapping: ZoomPlusMinus
+                MoveTrendArea:
+                  ObjectType: ControlBarToggleSwitchPart
+                  IsAlternateState: False
+                  Visible: False
+                  Enabled: True
+                  Mapping: MoveTrendArea
+                MoveAxesArea:
+                  ObjectType: ControlBarToggleSwitchPart
+                  IsAlternateState: False
+                  Visible: False
+                  Enabled: True
+                  Mapping: MoveAxesArea
+                OriginalView:
+                  ObjectType: ControlBarButtonPart
+                  Visible: False
+                  Enabled: True
+                  Mapping: OriginalView
+                SelectTimeRange:
+                  ObjectType: ControlBarButtonPart
+                  Visible: True
+                  Enabled: True
+                  Mapping: SelectTimeRange
+                SelectTrends:
+                  ObjectType: ControlBarButtonPart
+                  Visible: False
+                  Enabled: True
+                  Mapping: SelectTrends
+                SelectDataConnection:
+                  ObjectType: ControlBarButtonPart
+                  Visible: False
+                  Enabled: True
+                  Mapping: SelectDataConnection
+                DefineStatisticsArea:
+                  ObjectType: ControlBarToggleSwitchPart
+                  IsAlternateState: False
+                  Visible: False
+                  Enabled: True
+                  Mapping: DefineStatisticsArea
+                CalculateStatistics:
+                  ObjectType: ControlBarButtonPart
+                  Visible: False
+                  Enabled: False
+                  Mapping: CalculateStatistics
+                Print:
+                  ObjectType: ControlBarButtonPart
+                  Visible: False
+                  Enabled: True
+                  Mapping: Print
+                Export:
+                  ObjectType: ControlBarButtonPart
+                  Visible: False
+                  Enabled: True
+                  Mapping: Export
+                SelectContext:
+                  ObjectType: ControlBarButtonPart
+                  Visible: False
+                  Enabled: True
+                  Mapping: SelectContext
+            StatusBar:
+              Elements:
+                TimeBase:
+                  ObjectType: ControlBarDisplayPart
+                  Visible: False
+                  Enabled: True
+                  Mapping: TimeBase
+                Date:
+                  ObjectType: ControlBarLabelPart
+                  Visible: False
+                  Enabled: True
+                  Mapping: Date
+                Time:
+                  ObjectType: ControlBarLabelPart
+                  Visible: False
+                  Enabled: True
+                  Mapping: Time
+                ConnectionStatus:
+                  ObjectType: ControlBarDisplayPart
+                  Visible: True
+                  Enabled: True
+                  Mapping: ConnectionStatus
+                StartTime:
+                  ObjectType: ControlBarLabelPart
+                  Visible: True
+                  Enabled: True
+                  Mapping: StartTime
+                EndTime:
+                  ObjectType: ControlBarLabelPart
+                  Visible: True
+                  Enabled: True
+                  Mapping: EndTime
+                CurrentContextHint:
+                  ObjectType: ControlBarLabelPart
+                  Visible: True
+                  Enabled: True
+                  Mapping: CurrentContextHint
+                StatusText:
+                  ObjectType: ControlBarLabelPart
+                  Visible: True
+                  Enabled: True
+                  Mapping: StatusText
+            TrendAreas:
+              TrendArea_1:
+                GridLines: 3
+                SelectedTrend: .Trends.Trend_1
+                BottomTimeAxes:
+                  BottomTimeAxis_1:
+                    LabelColor: 0xFF575756
+                LeftValueAxes:
+                  LeftValueAxis_1:
+                    LabelColor: 0xFF575756
+                    HelpLines:
+                      HelpLine_1: 
+                Trends:
+                  Trend_1:
+                    TimeAxis: .BottomTimeAxes.BottomTimeAxis_1
+                    DisplayName: HmiScreenItemsTextLibrary.TextEntry_1
+                    YValueAxis: .LeftValueAxes.LeftValueAxis_1
+                    LineColor: 0xFF22A2C1
+                    DataSourceY:
+                      Source: ServerInterfaces_Server_Interface_1_tank_cVolume_Percent
+                  Trend_2:
+                    TimeAxis: .BottomTimeAxes.BottomTimeAxis_1
+                    DisplayName: HmiScreenItemsTextLibrary.TextEntry_4
+                    YValueAxis: .LeftValueAxes.LeftValueAxis_1
+                    DataSourceY:
+                      Source: ServerInterfaces_Server_Interface_1_tank_inputValve_cOpenPercent
+          HmiText_1:
+            ObjectType: Text
+            Left: 280
+            Text: HmiScreenItemsTextLibrary.TextEntry_2
+            Top: 32
+            Height: 50
+            Width: 729
+            StyleItemClass: HmiText
+            Font:
+              Description: HmiScreenItemsFontLibrary.FontEntry_1
+          HmiButton_1:
+            ObjectType: Button
+            Left: 18
+            Text: HmiScreenItemsTextLibrary.TextEntry_3
+            Top: 50
+            Height: 52
+            Width: 210
+            BorderColor: 0xFFB93217
+            BackColor: 0xFFD23E0B
+            Content:
+              HorizontalTextAlignment: Center
+              ContentMode: Text
+            EventHandlers:
+              EventHandler_1:
+                Event: Down
+                Type: Script
+                Script: '@local::EventScripts.Screen1_HmiButton_1_Down'
+              EventHandler_2:
+                Event: KeyUp
+                Type: Script
+                Script: '@local::EventScripts.Screen1_HmiButton_1_KeyUp'
+            Font:
+              Description: HmiScreenItemsFontLibrary.FontEntry_2
+          HandValve2_1:
+            ObjectType: CustomWidgetContainer
+            ContainedType: HandValve2
+            Left: -9
+            Top: 185
+            Height: 72
+            Width: 173
+          90DegreeBend2_1:
+            ObjectType: CustomWidgetContainer
+            ContainedType: 90DegreeBend2
+            Left: 159
+            Top: 207
+            Height: 94
+            Width: 100
+          90DegreeBend4_1:
+            ObjectType: CustomWidgetContainer
+            ContainedType: 90DegreeBend4
+            Left: 151
+            Top: 774
+            Height: 95
+            Width: 113
+          HandValve2_2:
+            ObjectType: CustomWidgetContainer
+            ContainedType: HandValve2
+            Left: -9
+            Top: 798
+            Height: 72
+            Width: 173
+          HmiSlider_1:
+            ObjectType: Slider
+            Left: 302
+            Top: 50
+            Height: 251
+            Width: 110
+            NormalRangeColor: 0xFF32B0BE
+            ProcessValue AS String: ''
+            StraightScale:
+              AutoScaling: True
+              BeginValue: 0
+              EndValue: 100
+              DivisionCount: 1
+            Dynamics:
+              TagDynamic_1:
+                ObjectType: TagDynamic
+                Property: .#ProcessValue
+                Direction: biDirectional
+                Indirect: False
+                Tag: ServerInterfaces_Server_Interface_1_tank_inputValve_cOpenPercent
+          HmiSlider_2:
+            ObjectType: Slider
+            Left: 279
+            Top: 778
+            Height: 233
+            Width: 111
+            NormalRangeColor: 0xFF329CBE
+            StraightScale:
+              AutoScaling: True
+              BeginValue: 0
+              EndValue: 100
+            Dynamics:
+              TagDynamic_1:
+                ObjectType: TagDynamic
+                Property: .#ProcessValue
+                Direction: biDirectional
+                Indirect: False
+                Tag: ServerInterfaces_Server_Interface_1_tank_outputValve_cOpenPercent
+            ProcessValue AS String: ''
+          HmiText_2:
+            ObjectType: Text
+            Left: 419
+            Text: HmiScreenItemsTextLibrary.TextEntry_8
+            Top: 115
+            Height: 40
+            Width: 195
+            Font:
+              Description: HmiScreenItemsFontLibrary.FontEntry_3
+          HmiLabel_1:
+            ObjectType: Label
+            Left: 437
+            Text: HmiScreenItemsTextLibrary.TextEntry_9
+            Top: 187
+            Height: 40
+            Width: 160
+            Dynamics:
+              TagDynamic_1:
+                ObjectType: TagDynamic
+                Property: .#Text
+                Direction: biDirectional
+                Indirect: False
+                Tag: ServerInterfaces_Server_Interface_1_tank_strCurrentStatus
+            Font:
+              Description: HmiScreenItemsFontLibrary.FontEntry_4
+    ScriptModules:
+      EventScripts:
+        ScriptLanguage: JavaScript
+        ScriptFile: Scripts/Screen1_EventScripts.js
+        Scripts:
+          Screen1_HmiButton_1_Down:
+            ReturnValueDataType: 0x80
+          Screen1_HmiButton_1_KeyUp:
+            ReturnValueDataType: 0x80
         # Items:
           ## Place screen items here, e.g.:
           # MyButton:

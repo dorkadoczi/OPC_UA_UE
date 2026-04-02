@@ -1,0 +1,222 @@
+<!DOCTYPE svg PUBLIC "-//SIEMENS//DTD SVG 1.0 TIA-HMI//EN" "http://tia.siemens.com/graphics/svg/1.4/dtd/svg14-hmi.dtd">
+<!-- SIMATIC WINCC Copyright (C) Siemens AG 2017. All Rights Reserved. -->
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:hmi-bind--xlink="http://svg.siemens.com/hmi/bind/xlink/"
+     xmlns:hmi="http://svg.siemens.com/hmi/"
+     xmlns:hmi-bind="http://svg.siemens.com/hmi/bind/"
+     xmlns:hmi-element="http://svg.siemens.com/hmi/element/"
+     xmlns:hmi-feature="http://svg.siemens.com/hmi/feature/"
+     xmlns:hmi-event="http://svg.siemens.com/hmi/event/"
+     viewBox="0 0 181.5 300"
+     preserveAspectRatio="none">
+
+	<hmi:self type="widget" displayName="Tank" name="extended.Tank" version="1.0.1" performanceClass="L">
+		<hmi:paramDef name="BasicColor"          type="HmiColor"   default="0xFFEEEEEE"/>
+		<hmi:paramDef name="FillLevelColor"      type="HmiColor"   default="0xFFFFA100"/>
+		<hmi:paramDef name="FillLevelValue"      type="number"     default="49"/>
+		<hmi:paramDef name="Minimum"             type="number"     default="0"/>
+		<hmi:paramDef name="Maximum"             type="number"     default="100"/>
+		<!-- <hmi:paramDef name="FluidRotation"       type="number"     default="0"/> -->
+		<hmi:paramDef name="DisplayFillLevel"    type="boolean"    default="false"/>
+		<hmi:paramDef name="DisplayFillMode"     type="number" 	   default="0"/>
+	</hmi:self>
+
+	<defs>
+		<hmi:localDef name="Color"											type="HmiColor" hmi-bind:value="{{ParamProps.BasicColor}}"/>
+		<hmi:localDef name="FillLevelValue"							type="number" 	hmi-bind:value="{{Converter.Bounds((ParamProps.FillLevelValue-ParamProps.Minimum)/(ParamProps.Maximum-ParamProps.Minimum), 0.0, 1.0)}}"/>
+		<hmi:localDef name="DisplayFillingBar" 					type="boolean"  hmi-bind:value="{{ and( eq(ParamProps.DisplayFillMode, 0), ParamProps.DisplayFillLevel ) }}"/>
+		<hmi:localDef name="DisplayFillingReflection" 	type="boolean"  hmi-bind:value="{{ and( eq(ParamProps.DisplayFillMode, 1), ParamProps.DisplayFillLevel ) }}"/>
+		<hmi:localDef name="FluidRotation" 			  			type="number" 	hmi-bind:value="{{0}}"/>	<!-- if FluidRotation is used: hmi-bind:value="{{Converter.Bounds(ParamProps.FluidRotation, -90, 0.0)}}-->
+	</defs>
+  <g id="Vessel">
+    <g id="Hopper_2_">
+      <linearGradient id="Shape_2_" gradientUnits="userSpaceOnUse" x1="-62.272" y1="163.6074" x2="152.6432" y2="230.7313">
+        <stop offset="0" hmi-bind:stop-color="{{Converter.RGBA(Converter.Darker(ParamProps.BasicColor, 0.353))}}"/>
+        <stop offset="7.102013e-02" hmi-bind:stop-color="{{Converter.RGBA(Converter.Darker(ParamProps.BasicColor, 0.290))}}"/>
+        <stop offset="0.2252" hmi-bind:stop-color="{{Converter.RGBA(Converter.Darker(ParamProps.BasicColor, 0.173))}}"/>
+        <stop offset="0.3574" hmi-bind:stop-color="{{Converter.RGBA(Converter.Darker(ParamProps.BasicColor, 0.102))}}"/>
+        <stop offset="0.4515" hmi-bind:stop-color="{{Converter.RGBA(Converter.Darker(ParamProps.BasicColor, 0.075))}}"/>
+        <stop offset="0.534" hmi-bind:stop-color="{{Converter.RGBA(Converter.Darker(ParamProps.BasicColor, 0.090))}}"/>
+        <stop offset="0.6178" hmi-bind:stop-color="{{Converter.RGBA(Converter.Darker(ParamProps.BasicColor, 0.137))}}"/>
+        <stop offset="0.7023" hmi-bind:stop-color="{{Converter.RGBA(Converter.Darker(ParamProps.BasicColor, 0.220))}}"/>
+        <stop offset="0.7872" hmi-bind:stop-color="{{Converter.RGBA(Converter.Darker(ParamProps.BasicColor, 0.329))}}"/>
+        <stop offset="0.8725" hmi-bind:stop-color="{{Converter.RGBA(Converter.Darker(ParamProps.BasicColor, 0.475))}}"/>
+        <stop offset="0.9569" hmi-bind:stop-color="{{Converter.RGBA(Converter.Darker(ParamProps.BasicColor, 0.647))}}"/>
+        <stop offset="1" hmi-bind:stop-color="{{Converter.RGBA(Converter.Darker(ParamProps.BasicColor, 0.749))}}"/>
+      </linearGradient>
+      <polygon id="Shape_1_" fill="url(#Shape_2_)" stroke="#8C8C91" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="107.8,277.4 73.7,277.4 2.4,167.6 179.1,167.6"/>
+      <linearGradient id="Reflection_Gradation_1_" gradientUnits="userSpaceOnUse" x1="101.8101" y1="171.8628" x2="2.0852" y2="253.534">
+        <stop offset="0" hmi-bind:stop-color="{{Converter.RGBA(Converter.Darker(ParamProps.BasicColor, 0.000))}}"/>
+        <stop offset="1" hmi-bind:stop-color="{{Converter.RGBA(Converter.Darker(ParamProps.BasicColor, 0.516))}}"/>
+      </linearGradient>
+      <polyline id="Reflection_Gradation_2_" fill="url(#Reflection_Gradation_1_)" stroke="#8C8C91" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="77.4,277.4 73.7,277.4 2.4,167.6 20.5,167.6"/>
+      <linearGradient id="Reflection_White_1_" gradientUnits="userSpaceOnUse" x1="83.5742" y1="200.772" x2="-47.5012" y2="290.535">
+			<stop offset="0" stop-color="#F2F2F2" stop-opacity="0.77"/>
+			<stop offset="1" stop-color="#F7F7F7" stop-opacity="0.1"/>
+      </linearGradient>
+      <polygon id="Reflection_White_2_" fill="url(#Reflection_White_1_)" points="20.5,168.2 77.2,276.9 83,276.9 50.8,168.2"/>
+    </g>
+    <linearGradient id="Shape_Vessel_2_" gradientUnits="userSpaceOnUse" x1="4.3862" y1="87.938" x2="179.5882" y2="87.938">
+      <stop offset="0" hmi-bind:stop-color="{{Converter.RGBA(Converter.Darker(ParamProps.BasicColor, 0.353))}}"/>
+      <stop offset="4.758149e-02" hmi-bind:stop-color="{{Converter.RGBA(Converter.Darker(ParamProps.BasicColor, 0.290))}}"/>
+      <stop offset="0.1509" hmi-bind:stop-color="{{Converter.RGBA(Converter.Darker(ParamProps.BasicColor, 0.173))}}"/>
+      <stop offset="0.2395" hmi-bind:stop-color="{{Converter.RGBA(Converter.Darker(ParamProps.BasicColor, 0.102))}}"/>
+      <stop offset="0.3025" hmi-bind:stop-color="{{Converter.RGBA(Converter.Darker(ParamProps.BasicColor, 0.075))}}"/>
+      <stop offset="0.4074" hmi-bind:stop-color="{{Converter.RGBA(Converter.Darker(ParamProps.BasicColor, 0.090))}}"/>
+      <stop offset="0.514" hmi-bind:stop-color="{{Converter.RGBA(Converter.Darker(ParamProps.BasicColor, 0.137))}}"/>
+      <stop offset="0.6214" hmi-bind:stop-color="{{Converter.RGBA(Converter.Darker(ParamProps.BasicColor, 0.220))}}"/>
+      <stop offset="0.7294" hmi-bind:stop-color="{{Converter.RGBA(Converter.Darker(ParamProps.BasicColor, 0.329))}}"/>
+      <stop offset="0.8378" hmi-bind:stop-color="{{Converter.RGBA(Converter.Darker(ParamProps.BasicColor, 0.475))}}"/>
+      <stop offset="0.9452" hmi-bind:stop-color="{{Converter.RGBA(Converter.Darker(ParamProps.BasicColor, 0.647))}}"/>
+      <stop offset="1" hmi-bind:stop-color="{{Converter.RGBA(Converter.Darker(ParamProps.BasicColor, 0.749))}}"/>
+    </linearGradient>
+    <polygon id="Shape_Vessel_1_" fill="url(#Shape_Vessel_2_)" stroke="#8C8C91" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="2.4,167.6 2.4,17.1 12.7,8.3 168.8,8.3 179,17.1 179,167.6"/>
+    <linearGradient id="Reflection_Top__x2B__Vessel_1_" gradientUnits="userSpaceOnUse" x1="22.6855" y1="87.6045" x2="43.5182" y2="87.6045">
+      <stop offset="0" stop-color="#F2F2F2" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#F7F7F7" stop-opacity="0.7"/>
+    </linearGradient>
+    <polygon id="Reflection_Top__x2B__Vessel" fill="url(#Reflection_Top__x2B__Vessel_1_)" points="50.8,166.5 50.8,16.4 55.4,8.7    28.8,8.7 20.5,16.4 20.5,166.5"/>
+    <linearGradient id="Top_Element_2_" gradientUnits="userSpaceOnUse" x1="12.9614" y1="5.3652" x2="167.9171" y2="5.3652">
+      <stop offset="0" hmi-bind:stop-color="{{Converter.RGBA(Converter.Darker(ParamProps.BasicColor, 0.353))}}"/>
+      <stop offset="4.758149e-02" hmi-bind:stop-color="{{Converter.RGBA(Converter.Darker(ParamProps.BasicColor, 0.290))}}"/>
+      <stop offset="0.1509" hmi-bind:stop-color="{{Converter.RGBA(Converter.Darker(ParamProps.BasicColor, 0.173))}}"/>
+      <stop offset="0.2395" hmi-bind:stop-color="{{Converter.RGBA(Converter.Darker(ParamProps.BasicColor, 0.102))}}"/>
+      <stop offset="0.3025" hmi-bind:stop-color="{{Converter.RGBA(Converter.Darker(ParamProps.BasicColor, 0.075))}}"/>
+      <stop offset="0.4074" hmi-bind:stop-color="{{Converter.RGBA(Converter.Darker(ParamProps.BasicColor, 0.090))}}"/>
+      <stop offset="0.514" hmi-bind:stop-color="{{Converter.RGBA(Converter.Darker(ParamProps.BasicColor, 0.137))}}"/>
+      <stop offset="0.6214" hmi-bind:stop-color="{{Converter.RGBA(Converter.Darker(ParamProps.BasicColor, 0.220))}}"/>
+      <stop offset="0.7294" hmi-bind:stop-color="{{Converter.RGBA(Converter.Darker(ParamProps.BasicColor, 0.329))}}"/>
+      <stop offset="0.8378" hmi-bind:stop-color="{{Converter.RGBA(Converter.Darker(ParamProps.BasicColor, 0.475))}}"/>
+      <stop offset="0.9452" hmi-bind:stop-color="{{Converter.RGBA(Converter.Darker(ParamProps.BasicColor, 0.647))}}"/>
+      <stop offset="1" hmi-bind:stop-color="{{Converter.RGBA(Converter.Darker(ParamProps.BasicColor, 0.749))}}"/>
+    </linearGradient>
+    <polygon id="Top_Element_1_" fill="url(#Top_Element_2_)" stroke="#8C8C91" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="90.6,2.5 12.7,8.3 168.8,8.3"/>
+  </g>
+  <g id="Uprights_1_">
+    <g id="Upright_Right_1_">
+      <linearGradient id="Floor_Plate_1_" gradientUnits="userSpaceOnUse" x1="137.9902" y1="296.2603" x2="162.7178" y2="296.2603">
+        <stop offset="0" stop-color="#A5A5A5"/>
+        <stop offset="2.959107e-02" stop-color="#B5B5B5"/>
+        <stop offset="9.382089e-02" stop-color="#D3D3D3"/>
+        <stop offset="0.1489" stop-color="#E5E5E5"/>
+        <stop offset="0.1881" stop-color="#ECECEC"/>
+        <stop offset="0.355" stop-color="#CECECE"/>
+        <stop offset="0.7166" stop-color="#808080"/>
+        <stop offset="1" stop-color="#404040"/>
+      </linearGradient>
+      <rect id="Floor_Plate_3_" x="138" y="294.9" fill="url(#Floor_Plate_1_)" stroke="#8C8C91" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" width="24.7" height="2.8"/>
+      <linearGradient id="Floor_Plate_Base_1_" gradientUnits="userSpaceOnUse" x1="137.99" y1="297.174" x2="162.718" y2="297.174" >
+        <stop offset="0" stop-color="#575756"/>
+        <stop offset="1.586480e-02" stop-color="#5D5C5C"/>
+        <stop offset="0.1171" stop-color="#797878"/>
+        <stop offset="0.2183" stop-color="#8D8D8C"/>
+        <stop offset="0.3189" stop-color="#999998"/>
+        <stop offset="0.4178" stop-color="#9D9D9C"/>
+        <stop offset="0.5402" stop-color="#979696"/>
+        <stop offset="0.7122" stop-color="#848484"/>
+        <stop offset="0.9127" stop-color="#676666"/>
+        <stop offset="1" stop-color="#575756"/>
+      </linearGradient>
+      <rect id="Floor_Plate_Base_3_" x="138" y="296.8" fill="url(#Floor_Plate_Base_1_)" stroke="#646567" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" width="24.7" height="0.8"/>
+      <linearGradient id="Shape_Pipe_1_" gradientUnits="userSpaceOnUse" x1="142.4517" y1="240.3867" x2="158.072" y2="240.3867">
+        <stop offset="0" stop-color="#A5A5A5"/>
+        <stop offset="2.959107e-02" stop-color="#B5B5B5"/>
+        <stop offset="9.382089e-02" stop-color="#D3D3D3"/>
+        <stop offset="0.1489" stop-color="#E5E5E5"/>
+        <stop offset="0.1881" stop-color="#ECECEC"/>
+        <stop offset="0.355" stop-color="#CECECE"/>
+        <stop offset="0.7166" stop-color="#808080"/>
+        <stop offset="1" stop-color="#404040"/>
+      </linearGradient>
+      <polygon id="Shape_Pipe_3_" fill="url(#Shape_Pipe_1_)" stroke="#646567" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="142,294.9 158.7,294.9 158.7,185.9 142,216"/>
+    </g>
+    <g id="Upright_Left_1_">
+      <linearGradient id="Floor_Plate_4_" gradientUnits="userSpaceOnUse" x1="18.7085" y1="296.2603" x2="43.4355" y2="296.2603">
+        <stop offset="0" stop-color="#FFFFFF"/>
+        <stop offset="1" stop-color="#7C7C7B"/>
+      </linearGradient>
+      <rect id="Floor_Plate_2_" x="18.7" y="294.9" fill="url(#Floor_Plate_4_)" stroke="#8C8C91" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" width="24.7" height="2.8"/>
+      <linearGradient id="Floor_Plate_Base_4_" gradientUnits="userSpaceOnUse" x1="18.708" y1="297.174" x2="43.436" y2="297.174" >
+        <stop offset="0" stop-color="#575756"/>
+        <stop offset="1.586480e-02" stop-color="#5D5C5C"/>
+        <stop offset="0.1171" stop-color="#797878"/>
+        <stop offset="0.2183" stop-color="#8D8D8C"/>
+        <stop offset="0.3189" stop-color="#999998"/>
+        <stop offset="0.4178" stop-color="#9D9D9C"/>
+        <stop offset="0.5402" stop-color="#979696"/>
+        <stop offset="0.7122" stop-color="#848484"/>
+        <stop offset="0.9127" stop-color="#676666"/>
+        <stop offset="1" stop-color="#575756"/>
+      </linearGradient>
+      <rect id="Floor_Plate_Base_2_" x="18.7" y="296.8" fill="url(#Floor_Plate_Base_4_)" stroke="#646567" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" width="24.7" height="0.8"/>
+      <linearGradient id="Shape_Pipe_4_" gradientUnits="userSpaceOnUse" x1="22.7041" y1="240.3867" x2="39.4399" y2="240.3867">
+        <stop offset="0" stop-color="#A5A5A5"/>
+        <stop offset="4.758149e-02" stop-color="#B5B5B5"/>
+        <stop offset="0.1509" stop-color="#D3D3D3"/>
+        <stop offset="0.2395" stop-color="#E5E5E5"/>
+        <stop offset="0.3025" stop-color="#ECECEC"/>
+        <stop offset="0.4074" stop-color="#E8E8E8"/>
+        <stop offset="0.514" stop-color="#DCDCDC"/>
+        <stop offset="0.6214" stop-color="#C7C7C7"/>
+        <stop offset="0.7294" stop-color="#ABABAB"/>
+        <stop offset="0.8378" stop-color="#868686"/>
+        <stop offset="0.9452" stop-color="#5A5A5A"/>
+        <stop offset="1" stop-color="#404040"/>
+      </linearGradient>
+      <polygon id="Shape_Pipe_2_" fill="url(#Shape_Pipe_4_)" stroke="#8C8C91" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="39.4,294.9 22.7,294.9 22.7,185.9 39.4,216"/>
+      <linearGradient id="Reflection_2_" gradientUnits="userSpaceOnUse" x1="25.25" y1="242.7402" x2="26.0083" y2="242.7402">
+        <stop offset="0" stop-color="#F2F2F2" stop-opacity="0.4"/>
+        <stop offset="1" stop-color="#F7F7F7" stop-opacity="0.7"/>
+      </linearGradient>
+      <polygon id="Reflection_1_" fill="url(#Reflection_2_)" points="27.3,294.4 25,294.4 25,191.1 27.3,195.4"/>
+    </g>
+  </g>
+  <g id="FillingGroup">
+	  <g id="FillingReflection">
+			<linearGradient id="Filling_1_" gradientUnits="userSpaceOnUse" x2="0" y2="8.7" x1="0" y1="276.9" hmi-bind:gradientTransform="rotate({{LocalProps.FluidRotation}}, 0, 0)">
+				<stop offset="0" hmi-bind:stop-color="{{Converter.RGBA(ParamProps.FillLevelColor)}}"/>
+				<stop hmi-bind:offset="{{LocalProps.FillLevelValue}}" hmi-bind:stop-color="{{Converter.RGBA(ParamProps.FillLevelColor)}}"/>
+				<stop hmi-bind:offset="{{LocalProps.FillLevelValue}}"	stop-color="white" stop-opacity="0.0"/>
+				<stop offset="1" stop-color="white" stop-opacity="0.0"/>
+			</linearGradient>
+			<polygon id="ReflectionFilling" fill="url(#Filling_1_)" hmi-bind:display="{{ and( and( gt( LocalProps.FluidRotation, -90.0 ), gt( LocalProps.FillLevelValue, 0 )), LocalProps.DisplayFillingReflection ) ? 'inline' : 'none'}}" points="50.8,168.5 50.8,16.4 55.4,8.7 28.8,8.7 20.5,16.4 20.5,168.5 77.2,276.9 83,276.9"/>
+			<linearGradient id="Filling_1_Vertical" gradientUnits="userSpaceOnUse" x1="0" y1="77.2" x2="0" y2="20.5" hmi-bind:gradientTransform="rotate({{LocalProps.FluidRotation}}, 0, 0)">
+				<stop offset="0" hmi-bind:stop-color="{{Converter.RGBA(ParamProps.FillLevelColor)}}"/>
+				<stop hmi-bind:offset="{{LocalProps.FillLevelValue}}" hmi-bind:stop-color="{{Converter.RGBA(ParamProps.FillLevelColor)}}"/>
+				<stop hmi-bind:offset="{{LocalProps.FillLevelValue}}"	stop-color="white" stop-opacity="0.0"/>
+				<stop offset="1" stop-color="white" stop-opacity="0.0"/>
+			</linearGradient>
+			<polygon id="ReflectionFillingVertical" fill="url(#Filling_1_Vertical)" hmi-bind:display="{{ and( and( le( LocalProps.FluidRotation, -90.0 ), gt( LocalProps.FillLevelValue, 0 )), LocalProps.DisplayFillingReflection ) ? 'inline' : 'none'}}" points="50.8,168.5 50.8,16.4 55.4,8.7 28.8,8.7 20.5,16.4 20.5,168.5 77.2,276.9 83,276.9"/>
+		</g>
+		<path id="Reflection_Lines_1_" fill="none" stroke="#FFFFFF" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M3.6,18h174 M3.6,168.6h174"/>
+		<path id="Devider_Lines_1_" fill="none" stroke="#646567" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M2.4,17.1H179 M2.4,167.6H179"/>
+		<g id="FillingRectangle" transform="translate(-7,-6)" hmi-bind:display="{{LocalProps.DisplayFillingBar ? 'inline' : 'none'}}">
+			<linearGradient id="Frame_1_" gradientUnits="userSpaceOnUse" x1="140.2148" y1="150.01221" x2="40.857803" y2="150.01221">
+			<stop offset="0" hmi-bind:stop-color="{{Converter.RGBA(Converter.Darker(ParamProps.BasicColor, 0.000))}}"/>
+			<stop offset="1" hmi-bind:stop-color="{{Converter.RGBA(Converter.Darker(ParamProps.BasicColor, 0.316))}}"/>
+			</linearGradient>
+			<path id="Frame" fill="url(#Frame_1_)" stroke="#8C8C91" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="m 88.499498,33.455142 c -0.37125,0 -0.680623,1.492258 -0.680623,3.282969 V 227.82195 c 0,1.79072 0.309373,3.28297 0.680623,3.28297 h 19.552512 c 0.37124,0 0.68062,-1.49225 0.68062,-3.28297 V 36.812724 c 0,-1.79071 -0.30938,-3.28297 -0.68062,-3.28297 H 88.499498 Z"/>
+			<linearGradient id="Opening_1_" gradientUnits="userSpaceOnUse" x1="189.2148" y1="150.01221" x2="84.857803" y2="150.01221">
+			<stop offset="0" stop-color="#6B6B6A"/>
+			<stop offset="1" stop-color="#434343"/>
+			</linearGradient>
+			<rect id="Opening" x="91.1" y="37.5" fill="url(#Opening_1_)" stroke="#575756" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" width="14.5" height="190"/>
+			<linearGradient id="FillingBar" gradientUnits="userSpaceOnUse" x1="0" y1="227.3" x2="0"  y2="38" hmi-bind:gradientTransform="rotate({{LocalProps.FluidRotation}}, 0, 0)">
+				<stop offset="0" hmi-bind:stop-color="{{Converter.RGBA(ParamProps.FillLevelColor)}}"/>
+				<stop hmi-bind:offset="{{LocalProps.FillLevelValue}}" hmi-bind:stop-color="{{Converter.RGBA(ParamProps.FillLevelColor)}}"/>
+				<stop hmi-bind:offset="{{LocalProps.FillLevelValue}}"	stop-color="white" stop-opacity="0.0"/>
+				<stop offset="1" stop-color="white" stop-opacity="0.0"/>
+			</linearGradient>
+			<rect id="FillLevel1" x="91.5" y="38" fill="url(#FillingBar)" hmi-bind:display="{{ and( and( gt( LocalProps.FluidRotation, -90.0 ), gt( LocalProps.FillLevelValue, 0 )), LocalProps.DisplayFillingBar ) ? 'inline' : 'none'}}" width="13.6" height="189.3"/>
+			<linearGradient id="FillingBarVertical" gradientUnits="userSpaceOnUse" x1="0" y1="105.1" x2="0"  y2="91.5" hmi-bind:gradientTransform="rotate({{LocalProps.FluidRotation}}, 0,0)">
+				<stop offset="0" hmi-bind:stop-color="{{Converter.RGBA(ParamProps.FillLevelColor)}}"/>
+				<stop hmi-bind:offset="{{LocalProps.FillLevelValue}}" hmi-bind:stop-color="{{Converter.RGBA(ParamProps.FillLevelColor)}}"/>
+				<stop hmi-bind:offset="{{LocalProps.FillLevelValue}}"	stop-color="white" stop-opacity="0.0"/>
+				<stop offset="1" stop-color="white" stop-opacity="0.0"/>
+			</linearGradient>
+			<rect id="OpeningVertical" x="91.5" y="38" fill="url(#FillingBarVertical)" hmi-bind:display="{{ and( and( le( LocalProps.FluidRotation, -90.0 ), gt( LocalProps.FillLevelValue, 0 )), LocalProps.DisplayFillingBar ) ? 'inline' : 'none'}}" width="13.6" height="189.3"/>
+    </g>
+  </g>
+</svg>

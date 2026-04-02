@@ -1,0 +1,45 @@
+#Version: 2.0
+
+RenderingTemplates:
+  Tank2:
+    TemplateFile: Tank2.svghmi
+  SphericalTank:
+    TemplateFile: SphericalTank.svghmi
+  StorageFacility:
+    TemplateFile: StorageFacility.svghmi
+  Tank:
+    TemplateFile: Tank.svghmi
+  Tank2WithScale:
+    TemplateFile: Tank2WithScale.svghmi
+  Tank4WithRivets:
+    TemplateFile: Tank4WithRivets.svghmi
+  TankOpening:
+    TemplateFile: TankOpening.svghmi
+  Barrel:
+    TemplateFile: Barrel.svghmi
+  ElementMove:
+    TemplateFile: ElementMove.svghmi
+  90DegreeBend1:
+    TemplateFile: 90DegreeBend1.svghmi
+  90DegreeBend2:
+    TemplateFile: 90DegreeBend2.svghmi
+  DoubleFlangeWithBoltsHorizontal:
+    TemplateFile: DoubleFlangeWithBoltsHorizontal.svghmi
+  PipeTeeLeft:
+    TemplateFile: PipeTeeLeft.svghmi
+  PipeTeeUp:
+    TemplateFile: PipeTeeUp.svghmi
+  ControlValve:
+    TemplateFile: ControlValve.svghmi
+  HandValve:
+    TemplateFile: HandValve.svghmi
+  ValveOpen:
+    TemplateFile: ValveOpen.svghmi
+  ValveShut:
+    TemplateFile: ValveShut.svghmi
+  HandValve2:
+    TemplateFile: HandValve2.svghmi
+  PipeHorizontal:
+    TemplateFile: PipeHorizontal.svghmi
+  90DegreeBend4:
+    TemplateFile: 90DegreeBend4.svghmi

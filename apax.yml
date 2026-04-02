@@ -21,7 +21,7 @@ scripts:
   fulldownload:
     - apax dm preparedownload $DEVICE --projectname $PROJECT
     #In case of first download ever, keep next line commented
-    # - apax dm stopruntime $DEVICE --projectname $PROJECT --unsecure
+    - apax dm stopruntime $DEVICE --projectname $PROJECT --unsecure
     - apax dm download $DEVICE --projectname $PROJECT --unsecure
     - apax dm startruntime $DEVICE --projectname $PROJECT --unsecure
 
@@ -32,6 +32,9 @@ scripts:
 
   #Update the Domain Functions
   updatedomainf: apax dm updatedomainfunctions $DEVICE --projectname $PROJECT
+  opc:  apax oe import --projectname $PROJECT --devicename $DEVICE --connectionmode online --connectiontype opcua --remotestation 192.168.0.1:4840 --connectionname opcua_1 --username User1 --password 1Siemens#
+  tags:     apax oe import --projectname $PROJECT --devicename $DEVICE --connectiontype opcUA --connectionmode online --configstructtags yes --connectionname opcua_1 --remotestation 192.168.0.1:4840 --username User1 --password 1Siemens# --intermediate
+  importtag:  apax oe import --projectname $PROJECT --devicename $DEVICE  --connectiontype opcUA --filter '(name = bIsOverflow && datatype = bool), (name = cVolume_Percent)' --source C:/Users/Win11/Desktop/AX_projects/shift_reg/obj/opcua/generated.xml
 
 dependencies:
   "@ue/code.elements": ^3.4.0

@@ -1,0 +1,122 @@
+SimpleTags:
+  ServerInterfaces_Server_Interface_1_tank_inputValve_rFlowRate_Current:
+    ObjectType: SIMPLETAG
+    Connection: opcua_1
+    DataType: DTReal
+    ControllerDataType: OpcUa_Float
+    Address: V:1$DA$ns=http://Server Interface_1;i=8
+    ManagerNumber: 3
+    AcquisitionMode: CyclicOnUse
+    AcquisitionCycle: T1s
+  ServerInterfaces_Server_Interface_1_tank_inputValve_rFlowRate_Max:
+    ObjectType: SIMPLETAG
+    Connection: opcua_1
+    DataType: DTReal
+    ControllerDataType: OpcUa_Float
+    Address: V:1$DA$ns=http://Server Interface_1;i=9
+    ManagerNumber: 3
+    AcquisitionMode: CyclicOnUse
+    AcquisitionCycle: T1s
+StructureTags:
+  DeviceSet_PLC_1:
+    ObjectType: STRUCTURETAG
+    StructureType: SimaticDeviceType
+    Icon:
+      ObjectType: SIMPLETAGMEMBER
+      DataType: DTRaw
+      ControllerDataType: OpcUa_ByteString
+      Connection: opcua_1
+      Address: V:1$DA$ns=http://www.siemens.com/simatic-s7-opcua;i=5201
+      ManagerNumber: 3
+      AcquisitionMode: CyclicOnUse
+      AcquisitionCycle: T1s
+    DeviceManual:
+      ObjectType: SIMPLETAGMEMBER
+      DataType: DTString
+      ControllerDataType: OpcUa_String
+      Connection: opcua_1
+      Address: V:1$DA$ns=http://www.siemens.com/simatic-s7-opcua;s=DeviceManual
+      ManagerNumber: 3
+      AcquisitionMode: CyclicOnUse
+      AcquisitionCycle: T1s
+    DeviceRevision:
+      ObjectType: SIMPLETAGMEMBER
+      DataType: DTString
+      ControllerDataType: OpcUa_String
+      Connection: opcua_1
+      Address: V:1$DA$ns=http://www.siemens.com/simatic-s7-opcua;s=DeviceRevision
+      ManagerNumber: 3
+      AcquisitionMode: CyclicOnUse
+      AcquisitionCycle: T1s
+    EngineeringRevision:
+      ObjectType: SIMPLETAGMEMBER
+      DataType: DTString
+      ControllerDataType: OpcUa_String
+      Connection: opcua_1
+      Address: V:1$DA$ns=http://www.siemens.com/simatic-s7-opcua;s=EngineeringRevision
+      ManagerNumber: 3
+      AcquisitionMode: CyclicOnUse
+      AcquisitionCycle: T1s
+    HardwareRevision:
+      ObjectType: SIMPLETAGMEMBER
+      DataType: DTString
+      ControllerDataType: OpcUa_String
+      Connection: opcua_1
+      Address: V:1$DA$ns=http://www.siemens.com/simatic-s7-opcua;s=HardwareRevision
+      ManagerNumber: 3
+      AcquisitionMode: CyclicOnUse
+      AcquisitionCycle: T1s
+    Manufacturer:
+      ObjectType: SIMPLETAGMEMBER
+      DataType: DTString
+      ControllerDataType: OpcUa_String
+      Connection: opcua_1
+      Address: V:1$DA$ns=http://www.siemens.com/simatic-s7-opcua;s=Manufacturer
+      ManagerNumber: 3
+      AcquisitionMode: CyclicOnUse
+      AcquisitionCycle: T1s
+    Model:
+      ObjectType: SIMPLETAGMEMBER
+      DataType: DTString
+      ControllerDataType: OpcUa_String
+      Connection: opcua_1
+      Address: V:1$DA$ns=http://www.siemens.com/simatic-s7-opcua;s=Model
+      ManagerNumber: 3
+      AcquisitionMode: CyclicOnUse
+      AcquisitionCycle: T1s
+    OrderNumber:
+      ObjectType: SIMPLETAGMEMBER
+      DataType: DTString
+      ControllerDataType: OpcUa_String
+      Connection: opcua_1
+      Address: V:1$DA$ns=http://www.siemens.com/simatic-s7-opcua;s=OrderNumber
+      ManagerNumber: 3
+      AcquisitionMode: CyclicOnUse
+      AcquisitionCycle: T1s
+    RevisionCounter:
+      ObjectType: SIMPLETAGMEMBER
+      DataType: DTDInt
+      ControllerDataType: OpcUa_Int32
+      Connection: opcua_1
+      Address: V:1$DA$ns=http://www.siemens.com/simatic-s7-opcua;s=RevisionCounter
+      ManagerNumber: 3
+      AcquisitionMode: CyclicOnUse
+      AcquisitionCycle: T1s
+    SerialNumber:
+      ObjectType: SIMPLETAGMEMBER
+      DataType: DTString
+      ControllerDataType: OpcUa_String
+      Connection: opcua_1
+      Address: V:1$DA$ns=http://www.siemens.com/simatic-s7-opcua;s=SerialNumber
+      ManagerNumber: 3
+      AcquisitionMode: CyclicOnUse
+      AcquisitionCycle: T1s
+    SoftwareRevision:
+      ObjectType: SIMPLETAGMEMBER
+      DataType: DTString
+      ControllerDataType: OpcUa_String
+      Connection: opcua_1
+      Address: V:1$DA$ns=http://www.siemens.com/simatic-s7-opcua;s=SoftwareRevision
+      ManagerNumber: 3
+      AcquisitionMode: CyclicOnUse
+      AcquisitionCycle: T1s

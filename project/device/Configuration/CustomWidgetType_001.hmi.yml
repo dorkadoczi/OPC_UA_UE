@@ -1,0 +1,321 @@
+#Version: 2.0
+
+CustomWidgetTypes:
+  Tank2:
+    RenderingTemplate: Tank2
+    PropertyInterface:
+      Properties:
+        Members:
+          BasicColor:
+            ObjectType: CustomPropertyType
+            DataType: Color
+          FillLevelColor:
+            ObjectType: CustomPropertyType
+            DataType: Color
+          FillLevelValue:
+            ObjectType: CustomPropertyType
+            DataType: DInt
+          Minimum:
+            ObjectType: CustomPropertyType
+            DataType: DInt
+          Maximum:
+            ObjectType: CustomPropertyType
+            DataType: DInt
+          DisplayFillLevel:
+            ObjectType: CustomPropertyType
+            DataType: Bool
+          DisplayFillMode:
+            ObjectType: CustomPropertyType
+            DataType: DInt
+  SphericalTank:
+    RenderingTemplate: SphericalTank
+    PropertyInterface:
+      Properties:
+        Members:
+          BasicColor:
+            ObjectType: CustomPropertyType
+            DataType: Color
+          FillLevelColor:
+            ObjectType: CustomPropertyType
+            DataType: Color
+          Minimum:
+            ObjectType: CustomPropertyType
+            DataType: DInt
+          Maximum:
+            ObjectType: CustomPropertyType
+            DataType: DInt
+          FillLevelValue:
+            ObjectType: CustomPropertyType
+            DataType: DInt
+          DisplayFillLevel:
+            ObjectType: CustomPropertyType
+            DataType: Bool
+          DisplayFillMode:
+            ObjectType: CustomPropertyType
+            DataType: DInt
+  StorageFacility:
+    RenderingTemplate: StorageFacility
+    PropertyInterface:
+      Properties:
+        Members:
+          BasicColor:
+            ObjectType: CustomPropertyType
+            DataType: Color
+          FillLevelColor:
+            ObjectType: CustomPropertyType
+            DataType: Color
+          FillLevelValue:
+            ObjectType: CustomPropertyType
+            DataType: DInt
+          Minimum:
+            ObjectType: CustomPropertyType
+            DataType: DInt
+          Maximum:
+            ObjectType: CustomPropertyType
+            DataType: DInt
+          DisplayFillLevel:
+            ObjectType: CustomPropertyType
+            DataType: Bool
+          DisplayFillMode:
+            ObjectType: CustomPropertyType
+            DataType: DInt
+  Tank:
+    RenderingTemplate: Tank
+    PropertyInterface:
+      Properties:
+        Members:
+          BasicColor:
+            ObjectType: CustomPropertyType
+            DataType: Color
+          FillLevelColor:
+            ObjectType: CustomPropertyType
+            DataType: Color
+          FillLevelValue:
+            ObjectType: CustomPropertyType
+            DataType: DInt
+          Minimum:
+            ObjectType: CustomPropertyType
+            DataType: DInt
+          Maximum:
+            ObjectType: CustomPropertyType
+            DataType: DInt
+          DisplayFillLevel:
+            ObjectType: CustomPropertyType
+            DataType: Bool
+          DisplayFillMode:
+            ObjectType: CustomPropertyType
+            DataType: DInt
+  Tank2WithScale:
+    RenderingTemplate: Tank2WithScale
+    PropertyInterface:
+      Properties:
+        Members:
+          BasicColor:
+            ObjectType: CustomPropertyType
+            DataType: Color
+          FillLevelColor:
+            ObjectType: CustomPropertyType
+            DataType: Color
+          FillLevelValue:
+            ObjectType: CustomPropertyType
+            DataType: DInt
+          Minimum:
+            ObjectType: CustomPropertyType
+            DataType: DInt
+          Maximum:
+            ObjectType: CustomPropertyType
+            DataType: DInt
+          DisplayFillLevel:
+            ObjectType: CustomPropertyType
+            DataType: Bool
+          DisplayFillMode:
+            ObjectType: CustomPropertyType
+            DataType: DInt
+  Tank4WithRivets:
+    RenderingTemplate: Tank4WithRivets
+    PropertyInterface:
+      Properties:
+        Members:
+          BasicColor:
+            ObjectType: CustomPropertyType
+            DataType: Color
+          FillLevelColor:
+            ObjectType: CustomPropertyType
+            DataType: Color
+          FillLevelValue:
+            ObjectType: CustomPropertyType
+            DataType: DInt
+          Minimum:
+            ObjectType: CustomPropertyType
+            DataType: DInt
+          Maximum:
+            ObjectType: CustomPropertyType
+            DataType: DInt
+          DisplayFillLevel:
+            ObjectType: CustomPropertyType
+            DataType: Bool
+          DisplayFillMode:
+            ObjectType: CustomPropertyType
+            DataType: DInt
+  TankOpening:
+    RenderingTemplate: TankOpening
+    PropertyInterface:
+      Properties:
+        Members:
+          BasicColor:
+            ObjectType: CustomPropertyType
+            DataType: Color
+          FillLevelColor:
+            ObjectType: CustomPropertyType
+            DataType: Color
+          Minimum:
+            ObjectType: CustomPropertyType
+            DataType: DInt
+          Maximum:
+            ObjectType: CustomPropertyType
+            DataType: DInt
+          FillLevelValue:
+            ObjectType: CustomPropertyType
+            DataType: DInt
+  Barrel:
+    RenderingTemplate: Barrel
+    PropertyInterface:
+      Properties:
+        Members:
+          BasicColor:
+            ObjectType: CustomPropertyType
+            DataType: Color
+          FillLevelColor:
+            ObjectType: CustomPropertyType
+            DataType: Color
+          FillLevelValue:
+            ObjectType: CustomPropertyType
+            DataType: DInt
+          Minimum:
+            ObjectType: CustomPropertyType
+            DataType: DInt
+          Maximum:
+            ObjectType: CustomPropertyType
+            DataType: DInt
+          DisplayFillLevel:
+            ObjectType: CustomPropertyType
+            DataType: Bool
+          DisplayFillMode:
+            ObjectType: CustomPropertyType
+            DataType: DInt
+  ElementMove:
+    RenderingTemplate: ElementMove
+    PropertyInterface:
+      Properties:
+        Members:
+          BasicColor:
+            ObjectType: CustomPropertyType
+            DataType: Color
+          ContrastColor:
+            ObjectType: CustomPropertyType
+            DataType: Color
+  90DegreeBend1:
+    RenderingTemplate: 90DegreeBend1
+    PropertyInterface:
+      Properties:
+        Members:
+          BasicColor:
+            ObjectType: CustomPropertyType
+            DataType: Color
+  90DegreeBend2:
+    RenderingTemplate: 90DegreeBend2
+    PropertyInterface:
+      Properties:
+        Members:
+          BasicColor:
+            ObjectType: CustomPropertyType
+            DataType: Color
+  DoubleFlangeWithBoltsHorizontal:
+    RenderingTemplate: DoubleFlangeWithBoltsHorizontal
+    PropertyInterface:
+      Properties:
+        Members:
+          BasicColor:
+            ObjectType: CustomPropertyType
+            DataType: Color
+  PipeTeeLeft:
+    RenderingTemplate: PipeTeeLeft
+    PropertyInterface:
+      Properties:
+        Members:
+          BasicColor:
+            ObjectType: CustomPropertyType
+            DataType: Color
+  PipeTeeUp:
+    RenderingTemplate: PipeTeeUp
+    PropertyInterface:
+      Properties:
+        Members:
+          BasicColor:
+            ObjectType: CustomPropertyType
+            DataType: Color
+  ControlValve:
+    RenderingTemplate: ControlValve
+    PropertyInterface:
+      Properties:
+        Members:
+          BasicColor:
+            ObjectType: CustomPropertyType
+            DataType: Color
+          ContrastColor:
+            ObjectType: CustomPropertyType
+            DataType: Color
+  HandValve:
+    RenderingTemplate: HandValve
+    PropertyInterface:
+      Properties:
+        Members:
+          BasicColor:
+            ObjectType: CustomPropertyType
+            DataType: Color
+          ContrastColor:
+            ObjectType: CustomPropertyType
+            DataType: Color
+  ValveOpen:
+    RenderingTemplate: ValveOpen
+    PropertyInterface:
+      Properties:
+        Members:
+          BasicColor:
+            ObjectType: CustomPropertyType
+            DataType: Color
+  ValveShut:
+    RenderingTemplate: ValveShut
+    PropertyInterface:
+      Properties:
+        Members:
+          BasicColor:
+            ObjectType: CustomPropertyType
+            DataType: Color
+  HandValve2:
+    RenderingTemplate: HandValve2
+    PropertyInterface:
+      Properties:
+        Members:
+          BasicColor:
+            ObjectType: CustomPropertyType
+            DataType: Color
+          ContrastColor:
+            ObjectType: CustomPropertyType
+            DataType: Color
+  PipeHorizontal:
+    RenderingTemplate: PipeHorizontal
+    PropertyInterface:
+      Properties:
+        Members:
+          BasicColor:
+            ObjectType: CustomPropertyType
+            DataType: Color
+  90DegreeBend4:
+    RenderingTemplate: 90DegreeBend4
+    PropertyInterface:
+      Properties:
+        Members:
+          BasicColor:
+            ObjectType: CustomPropertyType
+            DataType: Color

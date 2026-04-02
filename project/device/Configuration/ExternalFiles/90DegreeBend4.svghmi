@@ -1,0 +1,44 @@
+<!DOCTYPE svg PUBLIC "-//SIEMENS//DTD SVG 1.0 TIA-HMI//EN" "http://tia.siemens.com/graphics/svg/1.4/dtd/svg14-hmi.dtd">
+<!-- SIMATIC WINCC Copyright (C) Siemens AG 2017. All Rights Reserved. -->
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:hmi-bind--xlink="http://svg.siemens.com/hmi/bind/xlink/"
+     xmlns:hmi="http://svg.siemens.com/hmi/"
+     xmlns:hmi-bind="http://svg.siemens.com/hmi/bind/"
+     xmlns:hmi-element="http://svg.siemens.com/hmi/element/"
+     xmlns:hmi-feature="http://svg.siemens.com/hmi/feature/"
+     xmlns:hmi-event="http://svg.siemens.com/hmi/event/"
+     viewBox="0 0 300 300"
+     preserveAspectRatio="none">
+
+	<hmi:self type="widget" displayName="90DegreeBend4" name="extended.90DegreeBend4" version="1.0.1" performanceClass="L">
+		<hmi:paramDef name="BasicColor"         type="HmiColor"  default="0xFFEEEEEE"  />
+    </hmi:self>
+
+     <defs>
+       <hmi:localDef name="Color" type="HmiColor" hmi-bind:value="{{ParamProps.BasicColor}}" />
+     </defs>
+  <radialGradient id="Shape_1_" cx="2.5244" cy="2.4341" r="294.8271" gradientUnits="userSpaceOnUse">
+    <stop offset="0.5025" hmi-bind:stop-color="{{Converter.RGBA(Converter.Darker(ParamProps.BasicColor, 0.353))}}" />
+    <stop offset="0.5098" hmi-bind:stop-color="{{Converter.RGBA(Converter.Darker(ParamProps.BasicColor, 0.329))}}" />
+    <stop offset="0.5469" hmi-bind:stop-color="{{Converter.RGBA(Converter.Darker(ParamProps.BasicColor, 0.216))}}" />
+    <stop offset="0.5842" hmi-bind:stop-color="{{Converter.RGBA(Converter.Darker(ParamProps.BasicColor, 0.137))}}" />
+    <stop offset="0.6213" hmi-bind:stop-color="{{Converter.RGBA(Converter.Darker(ParamProps.BasicColor, 0.090))}}" />
+    <stop offset="0.658" hmi-bind:stop-color="{{Converter.RGBA(Converter.Darker(ParamProps.BasicColor, 0.075))}}" />
+    <stop offset="0.7046" hmi-bind:stop-color="{{Converter.RGBA(Converter.Darker(ParamProps.BasicColor, 0.094))}}" />
+    <stop offset="0.7572" hmi-bind:stop-color="{{Converter.RGBA(Converter.Darker(ParamProps.BasicColor, 0.145))}}" />
+    <stop offset="0.8128" hmi-bind:stop-color="{{Converter.RGBA(Converter.Darker(ParamProps.BasicColor, 0.235))}}" />
+    <stop offset="0.8704" hmi-bind:stop-color="{{Converter.RGBA(Converter.Darker(ParamProps.BasicColor, 0.361))}}" />
+    <stop offset="0.9295" hmi-bind:stop-color="{{Converter.RGBA(Converter.Darker(ParamProps.BasicColor, 0.518))}}" />
+    <stop offset="0.9892" hmi-bind:stop-color="{{Converter.RGBA(Converter.Darker(ParamProps.BasicColor, 0.710))}}" />
+    <stop offset="1" hmi-bind:stop-color="{{Converter.RGBA(Converter.Darker(ParamProps.BasicColor, 0.749))}}" />
+  </radialGradient>
+  <path id="Shape" fill="url(#Shape_1_)" d="M298.4,2c0,163.3-132.4,295.7-295.7,295.7V148.3C83.5,148.3,149,82.8,149,2H298.4z" />
+  <linearGradient id="Reflection_1_" gradientUnits="userSpaceOnUse" x1="79.145" y1="78.4185" x2="96.9293" y2="96.2027">
+    <stop offset="0" stop-color="#F2F2F2" stop-opacity="0.4" />
+    <stop offset="1" stop-color="#F7F7F7" stop-opacity="0.7" />
+  </linearGradient>
+  <path id="Reflection" fill="url(#Reflection_1_)" d="M164.3,2c0,71.2-46.1,131.7-110,153.2c-16.2,5.5-33.5,8.4-51.5,8.4V189  c103.3-0.2,187-83.7,187-187H164.3z" />
+  <path id="Outline" fill="none" stroke="#8C8C91" stroke-width="0.75" stroke-miterlimit="10" d="M149,2  c0,80.8-65.5,146.2-146.2,146.2 M2.7,297.7C166,297.7,298.4,165.3,298.4,2" />
+</svg>

@@ -1,0 +1,38 @@
+<!DOCTYPE svg PUBLIC "-//SIEMENS//DTD SVG 1.0 TIA-HMI//EN" "http://tia.siemens.com/graphics/svg/1.4/dtd/svg14-hmi.dtd">
+<!-- SIMATIC WINCC Copyright (C) Siemens AG 2017. All Rights Reserved. -->
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:hmi-bind--xlink="http://svg.siemens.com/hmi/bind/xlink/"
+     xmlns:hmi="http://svg.siemens.com/hmi/"
+     xmlns:hmi-bind="http://svg.siemens.com/hmi/bind/"
+     xmlns:hmi-element="http://svg.siemens.com/hmi/element/"
+     xmlns:hmi-feature="http://svg.siemens.com/hmi/feature/"
+     xmlns:hmi-event="http://svg.siemens.com/hmi/event/"
+     viewBox="0 0 300 300"
+     preserveAspectRatio="none">
+
+	<hmi:self type="widget" displayName="ElementMove" name="extended.ElementMove" version="1.0.1" performanceClass="L">
+		<hmi:paramDef name="BasicColor"         type="HmiColor"  default="0xFFEEEEEE"  />
+		<hmi:paramDef name="ContrastColor"      type="HmiColor"  default="0xFFCDCDCD"  />
+    </hmi:self>
+
+     <defs>
+       <hmi:localDef name="Color" type="HmiColor" hmi-bind:value="{{ParamProps.BasicColor}}"  />
+     </defs>
+  <linearGradient id="Shape_Inside_1_" gradientUnits="userSpaceOnUse" x1="95.4717" y1="95.0293" x2="314.1095" y2="313.6671">
+    <stop offset="0" hmi-bind:stop-color="{{Converter.RGBA(Converter.Darker(ParamProps.BasicColor, 0.000))}}" />
+    <stop offset="1" hmi-bind:stop-color="{{Converter.RGBA(Converter.Darker(ParamProps.BasicColor, 0.516))}}" />
+  </linearGradient>
+  <circle id="Shape_Inside" fill="url(#Shape_Inside_1_)" stroke="#8C8C91" stroke-width="0.75" stroke-miterlimit="10" cx="150" cy="149.6" r="117.3" />
+  <linearGradient id="Symbol_1_" gradientUnits="userSpaceOnUse" x1="44.4722" y1="44.0298" x2="150.9851" y2="150.5427">
+    <stop offset="0" hmi-bind:stop-color="{{Converter.RGBA(Converter.Darker(ParamProps.ContrastColor, 0.000))}}" />
+    <stop offset="1" hmi-bind:stop-color="{{Converter.RGBA(Converter.Darker(ParamProps.ContrastColor, 0.250))}}" />
+  </linearGradient>
+  <path id="Symbol" fill="url(#Symbol_1_)" hmi-bind:stroke="{{Converter.RGBA(ParamProps.ContrastColor)}}" stroke-width="0.75" stroke-miterlimit="10" d="M150,26.2  c-68.1,0-123.3,55.2-123.3,123.3S81.9,272.9,150,272.9s123.3-55.2,123.3-123.3S218.1,26.2,150,26.2z M150,149.6v117.3  c-64.8,0-117.3-52.5-117.3-117.3L150,149.6l0-117.3h0c64.8,0,117.3,52.5,117.3,117.3H150z" />
+  <linearGradient id="Ring_Outside_1_" gradientUnits="userSpaceOnUse" x1="-56.5278" y1="-56.9702" x2="409.9853" y2="409.5429">
+    <stop offset="0" hmi-bind:stop-color="{{Converter.RGBA(Converter.Darker(ParamProps.BasicColor, 0.000))}}" />
+    <stop offset="1" hmi-bind:stop-color="{{Converter.RGBA(Converter.Darker(ParamProps.BasicColor, 0.516))}}" />
+  </linearGradient>
+  <path id="Ring_Outside" fill="url(#Ring_Outside_1_)" stroke="#8C8C91" stroke-width="0.75" stroke-miterlimit="10" d="M150,1.6  C68.3,1.6,2,67.8,2,149.6s66.3,148,148,148s148-66.3,148-148S231.7,1.6,150,1.6z M150,272.9c-68.1,0-123.3-55.2-123.3-123.3  S81.9,26.2,150,26.2s123.3,55.2,123.3,123.3S218.1,272.9,150,272.9z" />
+</svg>

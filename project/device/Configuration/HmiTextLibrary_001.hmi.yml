@@ -1,0 +1,36 @@
+#Version: 2.0
+
+TextLibraries:
+  HmiScreenItemsTextLibrary:
+    Type: Text
+    Languages:
+    - en-US
+    DefaultLanguage: en-US
+    Entries:
+      TextEntry_1:
+        Text:
+        - Tank
+      TextEntry_2:
+        Text:
+        - OPC UA kommunikáció demó
+      TextEntry_3:
+        Text:
+        - Vészhelyzeti ürítés
+      TextEntry_4:
+        Text:
+        - Töltőszelep
+      TextEntry_5:
+        Text:
+        - Ürítőszelep
+      TextEntry_6:
+        Text:
+        - Nyitottság
+      TextEntry_7:
+        Text:
+        - Ürítőszelep
+      TextEntry_8:
+        Text:
+        - Tartály állapota
+      TextEntry_9:
+        Text:
+        - Állapot

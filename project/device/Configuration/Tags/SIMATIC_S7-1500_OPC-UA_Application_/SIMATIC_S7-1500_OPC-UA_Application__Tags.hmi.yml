@@ -1,0 +1,148 @@
+#Version: 2.0
+
+SimpleTags:
+  
+  ServerInterfaces_Server_Interface_1_tank_inputValve_cOpenPercent:
+    Connection: opcua_1
+    DataType: Byte
+    ControllerDataType: OpcUa_Byte
+    Address: V:1$DA$ns=http://Server Interface_1;i=10
+    ManagerNumber: 3
+    AcquisitionMode: CyclicOnUse
+    AcquisitionCycle: T1s
+  ServerInterfaces_Server_Interface_1_tank_inputValve_bIsOpen:
+    Connection: opcua_1
+    DataType: Bool
+    ControllerDataType: OpcUa_Boolean
+    Address: V:1$DA$ns=http://Server Interface_1;i=11
+    ManagerNumber: 3
+    AcquisitionMode: CyclicOnUse
+    AcquisitionCycle: T1s
+  ServerInterfaces_Server_Interface_1_tank_inputValve_name:
+    Connection: opcua_1
+    DataType: String
+    ControllerDataType: OpcUa_String
+    Address: V:1$DA$ns=http://Server Interface_1;i=12
+    ManagerNumber: 3
+    AcquisitionMode: CyclicOnUse
+    AcquisitionCycle: T1s
+  ServerInterfaces_Server_Interface_1_tank_outputValve_isEmergencyDraining:
+    Connection: opcua_1
+    DataType: Bool
+    ControllerDataType: OpcUa_Boolean
+    Address: V:1$DA$ns=http://Server Interface_1;i=16
+    ManagerNumber: 3
+    AcquisitionMode: CyclicOnUse
+    AcquisitionCycle: T1s
+  ServerInterfaces_Server_Interface_1_tank_outputValve_rFlowRate_Current:
+    Connection: opcua_1
+    DataType: Real
+    ControllerDataType: OpcUa_Float
+    Address: V:1$DA$ns=http://Server Interface_1;i=17
+    ManagerNumber: 3
+    AcquisitionMode: CyclicOnUse
+    AcquisitionCycle: T1s
+  ServerInterfaces_Server_Interface_1_tank_outputValve_rFlowRate_Max:
+    Connection: opcua_1
+    DataType: Real
+    ControllerDataType: OpcUa_Float
+    Address: V:1$DA$ns=http://Server Interface_1;i=18
+    ManagerNumber: 3
+    AcquisitionMode: CyclicOnUse
+    AcquisitionCycle: T1s
+  ServerInterfaces_Server_Interface_1_tank_outputValve_cOpenPercent:
+    Connection: opcua_1
+    DataType: Byte
+    ControllerDataType: OpcUa_Byte
+    Address: V:1$DA$ns=http://Server Interface_1;i=19
+    ManagerNumber: 3
+    AcquisitionMode: CyclicOnUse
+    AcquisitionCycle: T1s
+  ServerInterfaces_Server_Interface_1_tank_outputValve_bIsOpen:
+    Connection: opcua_1
+    DataType: Bool
+    ControllerDataType: OpcUa_Boolean
+    Address: V:1$DA$ns=http://Server Interface_1;i=20
+    ManagerNumber: 3
+    AcquisitionMode: CyclicOnUse
+    AcquisitionCycle: T1s
+  ServerInterfaces_Server_Interface_1_tank_outputValve_name:
+    Connection: opcua_1
+    DataType: String
+    ControllerDataType: OpcUa_String
+    Address: V:1$DA$ns=http://Server Interface_1;i=21
+    ManagerNumber: 3
+    AcquisitionMode: CyclicOnUse
+    AcquisitionCycle: T1s
+  ServerInterfaces_Server_Interface_1_tank_rFillRate:
+    Connection: opcua_1
+    DataType: Real
+    ControllerDataType: OpcUa_Float
+    Address: V:1$DA$ns=http://Server Interface_1;i=22
+    ManagerNumber: 3
+    AcquisitionMode: CyclicOnUse
+    AcquisitionCycle: T1s
+  ServerInterfaces_Server_Interface_1_tank_rVolume_Max:
+    Connection: opcua_1
+    DataType: Real
+    ControllerDataType: OpcUa_Float
+    Address: V:1$DA$ns=http://Server Interface_1;i=23
+    ManagerNumber: 3
+    AcquisitionMode: CyclicOnUse
+    AcquisitionCycle: T1s
+  ServerInterfaces_Server_Interface_1_tank_rVolume_Current:
+    Connection: opcua_1
+    DataType: Real
+    ControllerDataType: OpcUa_Float
+    Address: V:1$DA$ns=http://Server Interface_1;i=24
+    ManagerNumber: 3
+    AcquisitionMode: CyclicOnUse
+    AcquisitionCycle: T1s
+  ServerInterfaces_Server_Interface_1_tank_cVolume_Percent:
+    Connection: opcua_1
+    DataType: Byte
+    ControllerDataType: OpcUa_Byte
+    Address: V:1$DA$ns=http://Server Interface_1;i=25
+    ManagerNumber: 3
+    AcquisitionMode: CyclicOnUse
+    AcquisitionCycle: T1s
+  ServerInterfaces_Server_Interface_1_tank_bIsOverflow:
+    Connection: opcua_1
+    DataType: Bool
+    ControllerDataType: OpcUa_Boolean
+    Address: V:1$DA$ns=http://Server Interface_1;i=26
+    ManagerNumber: 3
+    AcquisitionMode: CyclicOnUse
+    AcquisitionCycle: T1s
+  ServerInterfaces_Server_Interface_1_tank_strCurrentStatus:
+    Connection: opcua_1
+    DataType: String
+    ControllerDataType: OpcUa_String
+    Address: V:1$DA$ns=http://Server Interface_1;i=27
+    ManagerNumber: 3
+    AcquisitionMode: CyclicOnUse
+    AcquisitionCycle: T1s
+  ServerInterfaces_Server_Interface_1_tank_ldtLastOverflow:
+    Connection: opcua_1
+    DataType: DateTime
+    ControllerDataType: OpcUa_DateTime
+    Address: V:1$DA$ns=http://Server Interface_1;i=28
+    ManagerNumber: 3
+    AcquisitionMode: CyclicOnUse
+    AcquisitionCycle: T1s
+  ServerInterfaces_Server_Interface_1_tank_inputValve_rFlowRate_Current:
+    Connection: opcua_1
+    DataType: Real
+    ControllerDataType: OpcUa_Float
+    Address: V:1$DA$ns=http://Server Interface_1;i=8
+    ManagerNumber: 3
+    AcquisitionMode: CyclicOnUse
+    AcquisitionCycle: T1s
+  ServerInterfaces_Server_Interface_1_tank_inputValve_rFlowRate_Max:
+    Connection: opcua_1
+    DataType: Real
+    ControllerDataType: OpcUa_Float
+    Address: V:1$DA$ns=http://Server Interface_1;i=9
+    ManagerNumber: 3
+    AcquisitionMode: CyclicOnUse
+    AcquisitionCycle: T1s

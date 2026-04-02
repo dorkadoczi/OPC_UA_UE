@@ -1,0 +1,30 @@
+#Version: 2.0
+
+SimpleTags:
+  opcua_1_ControllerTag:
+    Connection: opcua_1
+    DataType: Bool
+    ControllerDataType: OpcUa_Boolean
+    Address: V:2$AC$i=2041$i=2253
+    ManagerNumber: 3
+    AcquisitionMode: ExternAlert
+    Alarms:
+      opcua_1_ControllerAlarm:
+        ObjectType: HmiControllerAlarm
+        AlarmClass: Alarm
+        SourceType: Controller
+        Priority: None
+        SingleAcknowledgment: False
+        MultiInstance: False
+        Area: System/HMI/DriverCommunication
+        EventText: OpcuaAlarmTextLibrary.OpcuaAlarm
+TextLibraries:
+  OpcuaAlarmTextLibrary:
+    Type: Text
+    DefaultLanguage: en-US
+    Languages:
+    - en-US
+    Entries:
+      OpcuaAlarm:
+        Text:
+        - ''

@@ -11,6 +11,7 @@ Runtime:
     DefinitionFiles:
     - Tags/StructureTagTypes.hmi.yml
     - PREDEFINED/RuntimeSystem/CoreArtifacts_001.hmi.yml
+    - CustomWidgetType_001.hmi.yml
     Files:
     - AlarmClasses.hmi.yml
     - Resources/GraphicLibrary.hmi.yml
@@ -25,13 +26,21 @@ Runtime:
     - ScheduledTasks.hmi.yml
     - UserManagement/RolesFunctionRights.hmi.yml
     - UserManagement/Users.hmi.yml
-    - PREDEFINED/GeneratedGlobalScripts.hmi.yml
     - PREDEFINED/DomainFunctions.hmi.yml
     - DomainFunctions.hmi.yml
     - PREDEFINED/StaticArtifacts_001.hmi.yml
     - PREDEFINED/RuntimeSystem/StaticArtifacts_001.hmi.yml
     - PREDEFINED/UserInterfaceScripting/StaticArtifacts_001.hmi.yml
     - PREDEFINED/RTS/StaticArtifacts_001.hmi.yml
+    - PREDEFINED/OpcUaCommunication/StaticArtifacts_001.hmi.yml
+    - OPCUAHmiConnection_001.hmi.yml
+    - Tags/SIMATIC_S7-1500_OPC-UA_Application_/SIMATIC_S7-1500_OPC-UA_Application__Tags.hmi.yml
+    - SIMATIC_S7-1500_OPC-UA_Application_/SIMATIC_S7-1500_OPC-UA_Application__Alarms.hmi.yml
+    - generated/generated_Alarms.hmi.yml
+    - PREDEFINED/GeneratedGlobalScripts.hmi.yml
+    - RenderingTemplate_001.hmi.yml
+    - HmiTextLibrary_001.hmi.yml
+    - HmiFontDescLibrary_001.hmi.yml
     SymbolFiles:
     - PREDEFINED/ManagerNumbers.sym.yml
     StyleFiles:

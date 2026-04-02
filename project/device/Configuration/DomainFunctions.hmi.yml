@@ -5,8 +5,10 @@ DomainFunctions:
     Active: False
     Extension: true
   OpcUaCommunication:
-    Active: False
+    Active: true
     Extension: true
+    ConnectionID:
+    - opcua_1
   TagLogging:
     Active: False
     Extension: true

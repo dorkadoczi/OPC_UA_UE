@@ -1,0 +1,21 @@
+#Version: 2.0
+
+FontDescLibraries:
+  HmiScreenItemsFontLibrary:
+    Type: Text
+    Languages:
+    - en-US
+    DefaultLanguage: en-US
+    Entries:
+      FontEntry_1:
+        FontDescription:
+        - Siemens Sans;40;0;0;0;400
+      FontEntry_2:
+        FontDescription:
+        - Siemens Sans;25;0;0;0;400
+      FontEntry_3:
+        FontDescription:
+        - Siemens Sans;25;0;0;0;400
+      FontEntry_4:
+        FontDescription:
+        - Siemens Sans;20;0;0;0;400
